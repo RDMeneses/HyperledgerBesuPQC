@@ -1,0 +1,69 @@
+{
+    "EmptyTransaction" : {
+        "_info" : {
+            "comment" : "",
+            "filling-rpc-server" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "filling-tool-version" : "retesteth-0.3.2-cancun+commit.cae6bc33.Linux.g++",
+            "generatedTestHash" : "7ad0092cd1c16a5669e9d0a8de055736e24a9f64c118de2f9b65f820d4a355f5",
+            "lllcversion" : "Version: 0.5.14-develop.2023.7.11+commit.c58ab2c6.mod.Linux.g++",
+            "solidity" : "Version: 0.8.21+commit.d9974bed.Linux.g++",
+            "source" : "src/TransactionTestsFiller/ttSignature/EmptyTransactionFiller.json",
+            "sourceHash" : "815c0dc5c8edbbd772905026d21a11483f8299306a50cd27257e93b1ecead689"
+        },
+        "result" : {
+            "Berlin" : {
+                "exception" : "TransactionException.INVALID_SIGNATURE_VRS",
+                "intrinsicGas" : "0x00"
+            },
+            "Byzantium" : {
+                "exception" : "TransactionException.INVALID_SIGNATURE_VRS",
+                "intrinsicGas" : "0x00"
+            },
+            "Cancun" : {
+                "exception" : "TransactionException.INVALID_SIGNATURE_VRS",
+                "intrinsicGas" : "0x00"
+            },
+            "Constantinople" : {
+                "exception" : "TransactionException.INVALID_SIGNATURE_VRS",
+                "intrinsicGas" : "0x00"
+            },
+            "ConstantinopleFix" : {
+                "exception" : "TransactionException.INVALID_SIGNATURE_VRS",
+                "intrinsicGas" : "0x00"
+            },
+            "EIP150" : {
+                "exception" : "TransactionException.INVALID_SIGNATURE_VRS",
+                "intrinsicGas" : "0x00"
+            },
+            "EIP158" : {
+                "exception" : "TransactionException.INVALID_SIGNATURE_VRS",
+                "intrinsicGas" : "0x00"
+            },
+            "Frontier" : {
+                "exception" : "TransactionException.INVALID_SIGNATURE_VRS",
+                "intrinsicGas" : "0x00"
+            },
+            "Homestead" : {
+                "exception" : "TransactionException.INVALID_SIGNATURE_VRS",
+                "intrinsicGas" : "0x00"
+            },
+            "Istanbul" : {
+                "exception" : "TransactionException.INVALID_SIGNATURE_VRS",
+                "intrinsicGas" : "0x00"
+            },
+            "London" : {
+                "exception" : "TransactionException.INVALID_SIGNATURE_VRS",
+                "intrinsicGas" : "0x00"
+            },
+            "Paris" : {
+                "exception" : "TransactionException.INVALID_SIGNATURE_VRS",
+                "intrinsicGas" : "0x00"
+            },
+            "Shanghai" : {
+                "exception" : "TransactionException.INVALID_SIGNATURE_VRS",
+                "intrinsicGas" : "0x00"
+            }
+        },
+        "txbytes" : "0xc9808080808080808080"
+    }
+}

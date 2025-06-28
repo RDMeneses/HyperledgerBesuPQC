@@ -1,0 +1,65 @@
+{
+    "TRANSCT_gasLimit_TooLarge" : {
+        "_info" : {
+            "comment" : "",
+            "filling-rpc-server" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "filling-tool-version" : "retesteth-0.3.2-cancun+commit.cae6bc33.Linux.g++",
+            "generatedTestHash" : "6fd572dd0ab5237cc3ad804987ab798ea0130307dd69ee672cbe8f5476b00ad8",
+            "lllcversion" : "Version: 0.5.14-develop.2023.7.11+commit.c58ab2c6.mod.Linux.g++",
+            "solidity" : "Version: 0.8.21+commit.d9974bed.Linux.g++",
+            "source" : "src/TransactionTestsFiller/ttWrongRLP/TRANSCT_gasLimit_TooLargeCopier.json",
+            "sourceHash" : "b954a6f42fecec107a051cf70eaf5437548b405739ceb20b680137717152b63c"
+        },
+        "result" : {
+            "Berlin" : {
+                "exception" : "TransactionException.GASLIMIT_OVERFLOW",
+                "intrinsicGas" : "0x00"
+            },
+            "Byzantium" : {
+                "exception" : "TransactionException.GASLIMIT_OVERFLOW",
+                "intrinsicGas" : "0x00"
+            },
+            "Constantinople" : {
+                "exception" : "TransactionException.GASLIMIT_OVERFLOW",
+                "intrinsicGas" : "0x00"
+            },
+            "ConstantinopleFix" : {
+                "exception" : "TransactionException.GASLIMIT_OVERFLOW",
+                "intrinsicGas" : "0x00"
+            },
+            "EIP150" : {
+                "exception" : "TransactionException.GASLIMIT_OVERFLOW",
+                "intrinsicGas" : "0x00"
+            },
+            "EIP158" : {
+                "exception" : "TransactionException.GASLIMIT_OVERFLOW",
+                "intrinsicGas" : "0x00"
+            },
+            "Frontier" : {
+                "exception" : "TransactionException.GASLIMIT_OVERFLOW",
+                "intrinsicGas" : "0x00"
+            },
+            "Homestead" : {
+                "exception" : "TransactionException.GASLIMIT_OVERFLOW",
+                "intrinsicGas" : "0x00"
+            },
+            "Istanbul" : {
+                "exception" : "TransactionException.GASLIMIT_OVERFLOW",
+                "intrinsicGas" : "0x00"
+            },
+            "London" : {
+                "exception" : "TransactionException.GASLIMIT_OVERFLOW",
+                "intrinsicGas" : "0x00"
+            },
+            "Paris" : {
+                "exception" : "TransactionException.GASLIMIT_OVERFLOW",
+                "intrinsicGas" : "0x00"
+            },
+            "Shanghai" : {
+                "exception" : "TransactionException.GASLIMIT_OVERFLOW",
+                "intrinsicGas" : "0x00"
+            }
+        },
+        "txbytes" : "0xf8810301a2ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff07d094b94f5374fce5edbc8e2a8697c15331677e6ebf0b0a8255441ca098ff921201554726367d2be8c804a7ff89ccf285ebc57dff8ae4c44b9c19ac4aa08887321be575c8095f789dd4c743dfe42c1820f9231f98a962b210e3ac2452a3"
+    }
+}

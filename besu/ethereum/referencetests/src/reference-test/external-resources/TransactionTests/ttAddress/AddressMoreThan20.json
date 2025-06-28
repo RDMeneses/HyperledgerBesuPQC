@@ -1,0 +1,69 @@
+{
+    "AddressMoreThan20" : {
+        "_info" : {
+            "comment" : "",
+            "filling-rpc-server" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "filling-tool-version" : "retesteth-0.3.2-cancun+commit.cae6bc33.Linux.g++",
+            "generatedTestHash" : "014cafc700531a14f0cdb4a258ea75c79175727c0ebcf5a47b9cc2fa91828ef0",
+            "lllcversion" : "Version: 0.5.14-develop.2023.7.11+commit.c58ab2c6.mod.Linux.g++",
+            "solidity" : "Version: 0.8.21+commit.d9974bed.Linux.g++",
+            "source" : "src/TransactionTestsFiller/ttAddress/AddressMoreThan20Filler.json",
+            "sourceHash" : "d31c8dea9372a9968e699c1df6b7f79c75a038fbd31e1cbd43229d0eeef530f1"
+        },
+        "result" : {
+            "Berlin" : {
+                "exception" : "TransactionException.ADDRESS_TOO_LONG",
+                "intrinsicGas" : "0x00"
+            },
+            "Byzantium" : {
+                "exception" : "TransactionException.ADDRESS_TOO_LONG",
+                "intrinsicGas" : "0x00"
+            },
+            "Cancun" : {
+                "exception" : "TransactionException.ADDRESS_TOO_LONG",
+                "intrinsicGas" : "0x00"
+            },
+            "Constantinople" : {
+                "exception" : "TransactionException.ADDRESS_TOO_LONG",
+                "intrinsicGas" : "0x00"
+            },
+            "ConstantinopleFix" : {
+                "exception" : "TransactionException.ADDRESS_TOO_LONG",
+                "intrinsicGas" : "0x00"
+            },
+            "EIP150" : {
+                "exception" : "TransactionException.ADDRESS_TOO_LONG",
+                "intrinsicGas" : "0x00"
+            },
+            "EIP158" : {
+                "exception" : "TransactionException.ADDRESS_TOO_LONG",
+                "intrinsicGas" : "0x00"
+            },
+            "Frontier" : {
+                "exception" : "TransactionException.ADDRESS_TOO_LONG",
+                "intrinsicGas" : "0x00"
+            },
+            "Homestead" : {
+                "exception" : "TransactionException.ADDRESS_TOO_LONG",
+                "intrinsicGas" : "0x00"
+            },
+            "Istanbul" : {
+                "exception" : "TransactionException.ADDRESS_TOO_LONG",
+                "intrinsicGas" : "0x00"
+            },
+            "London" : {
+                "exception" : "TransactionException.ADDRESS_TOO_LONG",
+                "intrinsicGas" : "0x00"
+            },
+            "Paris" : {
+                "exception" : "TransactionException.ADDRESS_TOO_LONG",
+                "intrinsicGas" : "0x00"
+            },
+            "Shanghai" : {
+                "exception" : "TransactionException.ADDRESS_TOO_LONG",
+                "intrinsicGas" : "0x00"
+            }
+        },
+        "txbytes" : "0xf860800182520895b94f5374fce5edbc8e2a8697c15331677e6ebf0b1c0a801ca098ff921201554726367d2be8c804a7ff89ccf285ebc57dff8ae4c44b9c19ac4aa08887321be575c8095f789dd4c743dfe42c1820f9231f98a962b210e3ac2452a3"
+    }
+}

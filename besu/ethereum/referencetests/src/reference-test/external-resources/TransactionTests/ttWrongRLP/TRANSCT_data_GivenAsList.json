@@ -1,0 +1,65 @@
+{
+    "TRANSCT_data_GivenAsList" : {
+        "_info" : {
+            "comment" : "",
+            "filling-rpc-server" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "filling-tool-version" : "retesteth-0.3.2-cancun+commit.cae6bc33.Linux.g++",
+            "generatedTestHash" : "a8115b9875bcc9351d9bee52a6341e195be902f928cd083515ae2a735dc11936",
+            "lllcversion" : "Version: 0.5.14-develop.2023.7.11+commit.c58ab2c6.mod.Linux.g++",
+            "solidity" : "Version: 0.8.21+commit.d9974bed.Linux.g++",
+            "source" : "src/TransactionTestsFiller/ttWrongRLP/TRANSCT_data_GivenAsListCopier.json",
+            "sourceHash" : "c17e741e1360167de4b2370bc04c551b00d9d70a77ce9db70527f06cd3fb115d"
+        },
+        "result" : {
+            "Berlin" : {
+                "exception" : "TransactionException.RLP_INVALID_DATA",
+                "intrinsicGas" : "0x00"
+            },
+            "Byzantium" : {
+                "exception" : "TransactionException.RLP_INVALID_DATA",
+                "intrinsicGas" : "0x00"
+            },
+            "Constantinople" : {
+                "exception" : "TransactionException.RLP_INVALID_DATA",
+                "intrinsicGas" : "0x00"
+            },
+            "ConstantinopleFix" : {
+                "exception" : "TransactionException.RLP_INVALID_DATA",
+                "intrinsicGas" : "0x00"
+            },
+            "EIP150" : {
+                "exception" : "TransactionException.RLP_INVALID_DATA",
+                "intrinsicGas" : "0x00"
+            },
+            "EIP158" : {
+                "exception" : "TransactionException.RLP_INVALID_DATA",
+                "intrinsicGas" : "0x00"
+            },
+            "Frontier" : {
+                "exception" : "TransactionException.RLP_INVALID_DATA",
+                "intrinsicGas" : "0x00"
+            },
+            "Homestead" : {
+                "exception" : "TransactionException.RLP_INVALID_DATA",
+                "intrinsicGas" : "0x00"
+            },
+            "Istanbul" : {
+                "exception" : "TransactionException.RLP_INVALID_DATA",
+                "intrinsicGas" : "0x00"
+            },
+            "London" : {
+                "exception" : "TransactionException.RLP_INVALID_DATA",
+                "intrinsicGas" : "0x00"
+            },
+            "Paris" : {
+                "exception" : "TransactionException.RLP_INVALID_DATA",
+                "intrinsicGas" : "0x00"
+            },
+            "Shanghai" : {
+                "exception" : "TransactionException.RLP_INVALID_DATA",
+                "intrinsicGas" : "0x00"
+            }
+        },
+        "txbytes" : "0xf86103018207d094b94f5374fce5edbc8e2a8697c15331677e6ebf0b0ac255441ca098ff921201554726367d2be8c804a7ff89ccf285ebc57dff8ae4c44b9c19ac4aa08887321be575c8095f789dd4c743dfe42c1820f9231f98a962b210e3ac2452a3"
+    }
+}

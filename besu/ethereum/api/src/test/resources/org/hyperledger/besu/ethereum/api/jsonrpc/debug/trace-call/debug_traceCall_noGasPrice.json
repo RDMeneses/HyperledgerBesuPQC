@@ -1,0 +1,36 @@
+{
+  "request": {
+    "jsonrpc": "2.0",
+    "method": "debug_traceCall",
+    "params": [
+      {
+        "to": "0x0F792be4B0c0cb4DAE440Ef133E90C0eCD48CCCC",
+        "data": "0x000000000000000000000000000000000000000000000000000000000001A00E"
+      },
+      "latest",
+      {
+        "disableMemory": true,
+        "disableStack": true,
+        "disableStorage": true
+      }
+    ],
+    "id": 1
+  },
+  "response": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": {
+      "gas" : 21164,
+      "failed" : false,
+      "returnValue" : "",
+      "structLogs" : [ {
+        "pc" : 0,
+        "op" : "STOP",
+        "gas" : 17592186023252,
+        "gasCost" : 0,
+        "depth" : 1
+      } ]
+    }
+  },
+  "statusCode": 200
+}

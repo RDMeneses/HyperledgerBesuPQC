@@ -1,0 +1,3 @@
+[submodule "besu"]
+	path = besu
+	url = https://github.com/hyperledger/besu.git

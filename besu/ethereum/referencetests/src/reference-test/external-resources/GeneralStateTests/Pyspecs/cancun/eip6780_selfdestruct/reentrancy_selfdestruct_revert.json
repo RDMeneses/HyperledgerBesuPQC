@@ -1,0 +1,2387 @@
+{
+    "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Cancun-state_test-second_suicide_CALL-first_suicide_CALLCODE]" : {
+        "_info" : {
+            "comment" : "`execution-spec-tests` generated test",
+            "description" : "Test function documentation:\n\n    Suicide reentrancy scenario:\n\n    Call|Callcode|Delegatecall the contract S.\n    S self destructs.\n    Call the revert proxy contract R.\n    R Calls|Callcode|Delegatecall S.\n    S self destructs (for the second time).\n    R reverts (including the effects of the second selfdestruct).\n    It is expected the S is self destructed after the transaction.",
+            "filling-rpc-server" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "filling-tool-version" : "retesteth-0.3.2-cancun+commit.2a41f237.Linux.g++",
+            "filling-transition-tool" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "generatedTestHash" : "761e691d780c9037bf6834ea3190ec7928d12cb108eb0dfeca451513038ec7db",
+            "hash" : "0x2c29eeab8f47877d503af70afabcb99d34a2396d1b9b834aa4a67a88ac8a0170",
+            "lllcversion" : "Version: 0.5.14-develop.2023.7.11+commit.c58ab2c6.mod.Linux.g++",
+            "solidity" : "Version: 0.8.21+commit.d9974bed.Linux.g++",
+            "source" : "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py",
+            "sourceHash" : "e2f4e511e7fa159efc349cb0c53c8ff499d77f037da177c53ee125e066fa4c10",
+            "url" : "https://github.com/ethereum/execution-spec-tests/blob/87ef9bee36585b5b9f72d6eaafeeb1999b641d3c/tests/tmp/tmptest_7b48c1f5_cdc8_4ff9_a1f6_c4e180ee27a2/test_reentrancy_selfdestruct_revert.py#L35"
+        },
+        "env" : {
+            "currentBaseFee" : "0x07",
+            "currentCoinbase" : "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentDifficulty" : "0x00",
+            "currentExcessBlobGas" : "0x00",
+            "currentGasLimit" : "0xff112233445566",
+            "currentNumber" : "0x01",
+            "currentRandom" : "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentTimestamp" : "0x03e8"
+        },
+        "post" : {
+            "Cancun" : [
+                {
+                    "hash" : "0x8bbc3b8cb7c76b27e3dd1ae6fdc914f8b82c58d1a419c9b455060a31d8eeaade",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf860800a8307a120948a0a19589531694250d570040a0c4b74576919b880801ca09a207ad45b7fc2aa5f8e72a30487f2b0bc489778e6d022f19036efdf2a922a17a0640d4da05078b5a4aa561f1b4d58176ea828bfa0f88d27d14459c1d789e1a1eb"
+                }
+            ]
+        },
+        "pre" : {
+            "0x1000000000000000000000000000000000000001" : {
+                "balance" : "0x29a2241af62c0000",
+                "code" : "0x6103e8ff",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x1000000000000000000000000000000000000002" : {
+                "balance" : "0x4563918244f40000",
+                "code" : "0x600060006000600060647310000000000000000000000000000000000000015af1600f0160005260206000fd",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x8a0a19589531694250d570040a0c4b74576919b8" : {
+                "balance" : "0x0de0b6b3a7640000",
+                "code" : "0x600060006000600060007310000000000000000000000000000000000000015af2600155600060006000600060007310000000000000000000000000000000000000025af16002553d600060003e600051600355",
+                "nonce" : "0x00",
+                "storage" : {
+                    "0x01" : "0x0100",
+                    "0x02" : "0x0100",
+                    "0x03" : "0x0100"
+                }
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {
+                "balance" : "0x6124fee993bc0000",
+                "code" : "0x",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            }
+        },
+        "transaction" : {
+            "data" : [
+                "0x"
+            ],
+            "gasLimit" : [
+                "0x07a120"
+            ],
+            "gasPrice" : "0x0a",
+            "nonce" : "0x00",
+            "secretKey" : "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8",
+            "sender" : "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "to" : "0x8a0a19589531694250d570040a0c4b74576919b8",
+            "value" : [
+                "0x00"
+            ]
+        }
+    },
+    "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Cancun-state_test-second_suicide_CALL-first_suicide_CALL]" : {
+        "_info" : {
+            "comment" : "`execution-spec-tests` generated test",
+            "description" : "Test function documentation:\n\n    Suicide reentrancy scenario:\n\n    Call|Callcode|Delegatecall the contract S.\n    S self destructs.\n    Call the revert proxy contract R.\n    R Calls|Callcode|Delegatecall S.\n    S self destructs (for the second time).\n    R reverts (including the effects of the second selfdestruct).\n    It is expected the S is self destructed after the transaction.",
+            "filling-rpc-server" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "filling-tool-version" : "retesteth-0.3.2-cancun+commit.2a41f237.Linux.g++",
+            "filling-transition-tool" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "generatedTestHash" : "2ec6f864f0958d6bb2171d86b2efeed1a1be6d0d813342167b5b7865038434d9",
+            "hash" : "0x9f489243f8b358dd5b555a25ec571f7001b0bd462173524785ad6447738f78e1",
+            "lllcversion" : "Version: 0.5.14-develop.2023.7.11+commit.c58ab2c6.mod.Linux.g++",
+            "solidity" : "Version: 0.8.21+commit.d9974bed.Linux.g++",
+            "source" : "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py",
+            "sourceHash" : "e2f4e511e7fa159efc349cb0c53c8ff499d77f037da177c53ee125e066fa4c10",
+            "url" : "https://github.com/ethereum/execution-spec-tests/blob/87ef9bee36585b5b9f72d6eaafeeb1999b641d3c/tests/tmp/tmptest_7b48c1f5_cdc8_4ff9_a1f6_c4e180ee27a2/test_reentrancy_selfdestruct_revert.py#L35"
+        },
+        "env" : {
+            "currentBaseFee" : "0x07",
+            "currentCoinbase" : "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentDifficulty" : "0x00",
+            "currentExcessBlobGas" : "0x00",
+            "currentGasLimit" : "0xff112233445566",
+            "currentNumber" : "0x01",
+            "currentRandom" : "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentTimestamp" : "0x03e8"
+        },
+        "post" : {
+            "Cancun" : [
+                {
+                    "hash" : "0xaf39cb7574538c4ed2be5e4c8b27062d741fb5409c3947c59a5405923274adcb",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf860800a8307a120948a0a19589531694250d570040a0c4b74576919b880801ca09a207ad45b7fc2aa5f8e72a30487f2b0bc489778e6d022f19036efdf2a922a17a0640d4da05078b5a4aa561f1b4d58176ea828bfa0f88d27d14459c1d789e1a1eb"
+                }
+            ]
+        },
+        "pre" : {
+            "0x1000000000000000000000000000000000000001" : {
+                "balance" : "0x29a2241af62c0000",
+                "code" : "0x6103e8ff",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x1000000000000000000000000000000000000002" : {
+                "balance" : "0x4563918244f40000",
+                "code" : "0x600060006000600060647310000000000000000000000000000000000000015af1600f0160005260206000fd",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x8a0a19589531694250d570040a0c4b74576919b8" : {
+                "balance" : "0x0de0b6b3a7640000",
+                "code" : "0x600060006000600060007310000000000000000000000000000000000000015af1600155600060006000600060007310000000000000000000000000000000000000025af16002553d600060003e600051600355",
+                "nonce" : "0x00",
+                "storage" : {
+                    "0x01" : "0x0100",
+                    "0x02" : "0x0100",
+                    "0x03" : "0x0100"
+                }
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {
+                "balance" : "0x6124fee993bc0000",
+                "code" : "0x",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            }
+        },
+        "transaction" : {
+            "data" : [
+                "0x"
+            ],
+            "gasLimit" : [
+                "0x07a120"
+            ],
+            "gasPrice" : "0x0a",
+            "nonce" : "0x00",
+            "secretKey" : "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8",
+            "sender" : "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "to" : "0x8a0a19589531694250d570040a0c4b74576919b8",
+            "value" : [
+                "0x00"
+            ]
+        }
+    },
+    "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Cancun-state_test-second_suicide_CALL-first_suicide_DELEGATECALL]" : {
+        "_info" : {
+            "comment" : "`execution-spec-tests` generated test",
+            "description" : "Test function documentation:\n\n    Suicide reentrancy scenario:\n\n    Call|Callcode|Delegatecall the contract S.\n    S self destructs.\n    Call the revert proxy contract R.\n    R Calls|Callcode|Delegatecall S.\n    S self destructs (for the second time).\n    R reverts (including the effects of the second selfdestruct).\n    It is expected the S is self destructed after the transaction.",
+            "filling-rpc-server" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "filling-tool-version" : "retesteth-0.3.2-cancun+commit.2a41f237.Linux.g++",
+            "filling-transition-tool" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "generatedTestHash" : "16702b5033bb8b1d07a5936be2cac37df57f513fc3c1bfdfebcd96c6b22fd624",
+            "hash" : "0xf2e549bc750d8134174a373a33542270475c3bc85cbc1c063ada6d2f36c719db",
+            "lllcversion" : "Version: 0.5.14-develop.2023.7.11+commit.c58ab2c6.mod.Linux.g++",
+            "solidity" : "Version: 0.8.21+commit.d9974bed.Linux.g++",
+            "source" : "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py",
+            "sourceHash" : "e2f4e511e7fa159efc349cb0c53c8ff499d77f037da177c53ee125e066fa4c10",
+            "url" : "https://github.com/ethereum/execution-spec-tests/blob/87ef9bee36585b5b9f72d6eaafeeb1999b641d3c/tests/tmp/tmptest_7b48c1f5_cdc8_4ff9_a1f6_c4e180ee27a2/test_reentrancy_selfdestruct_revert.py#L35"
+        },
+        "env" : {
+            "currentBaseFee" : "0x07",
+            "currentCoinbase" : "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentDifficulty" : "0x00",
+            "currentExcessBlobGas" : "0x00",
+            "currentGasLimit" : "0xff112233445566",
+            "currentNumber" : "0x01",
+            "currentRandom" : "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentTimestamp" : "0x03e8"
+        },
+        "post" : {
+            "Cancun" : [
+                {
+                    "hash" : "0xb32f3dd12005498903b43ca4e53fff7590c67c575dda288db4470a703b11d503",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf860800a8307a120948a0a19589531694250d570040a0c4b74576919b880801ca09a207ad45b7fc2aa5f8e72a30487f2b0bc489778e6d022f19036efdf2a922a17a0640d4da05078b5a4aa561f1b4d58176ea828bfa0f88d27d14459c1d789e1a1eb"
+                }
+            ]
+        },
+        "pre" : {
+            "0x1000000000000000000000000000000000000001" : {
+                "balance" : "0x29a2241af62c0000",
+                "code" : "0x6103e8ff",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x1000000000000000000000000000000000000002" : {
+                "balance" : "0x4563918244f40000",
+                "code" : "0x600060006000600060647310000000000000000000000000000000000000015af1600f0160005260206000fd",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x8a0a19589531694250d570040a0c4b74576919b8" : {
+                "balance" : "0x0de0b6b3a7640000",
+                "code" : "0x60006000600060007310000000000000000000000000000000000000015af4600155600060006000600060007310000000000000000000000000000000000000025af16002553d600060003e600051600355",
+                "nonce" : "0x00",
+                "storage" : {
+                    "0x01" : "0x0100",
+                    "0x02" : "0x0100",
+                    "0x03" : "0x0100"
+                }
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {
+                "balance" : "0x6124fee993bc0000",
+                "code" : "0x",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            }
+        },
+        "transaction" : {
+            "data" : [
+                "0x"
+            ],
+            "gasLimit" : [
+                "0x07a120"
+            ],
+            "gasPrice" : "0x0a",
+            "nonce" : "0x00",
+            "secretKey" : "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8",
+            "sender" : "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "to" : "0x8a0a19589531694250d570040a0c4b74576919b8",
+            "value" : [
+                "0x00"
+            ]
+        }
+    },
+    "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Cancun-state_test-second_suicide_CALLCODE-first_suicide_CALLCODE]" : {
+        "_info" : {
+            "comment" : "`execution-spec-tests` generated test",
+            "description" : "Test function documentation:\n\n    Suicide reentrancy scenario:\n\n    Call|Callcode|Delegatecall the contract S.\n    S self destructs.\n    Call the revert proxy contract R.\n    R Calls|Callcode|Delegatecall S.\n    S self destructs (for the second time).\n    R reverts (including the effects of the second selfdestruct).\n    It is expected the S is self destructed after the transaction.",
+            "filling-rpc-server" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "filling-tool-version" : "retesteth-0.3.2-cancun+commit.2a41f237.Linux.g++",
+            "filling-transition-tool" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "generatedTestHash" : "226b2e2d01ba2e18fedcd6457b44216f6ef06a032ffd846e9c0d72a719bebb60",
+            "hash" : "0x230bba3aa7e247443ff2eb2c9fc4019ecf969ddfae8ca4fbcafbb034e7cb6c34",
+            "lllcversion" : "Version: 0.5.14-develop.2023.7.11+commit.c58ab2c6.mod.Linux.g++",
+            "solidity" : "Version: 0.8.21+commit.d9974bed.Linux.g++",
+            "source" : "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py",
+            "sourceHash" : "e2f4e511e7fa159efc349cb0c53c8ff499d77f037da177c53ee125e066fa4c10",
+            "url" : "https://github.com/ethereum/execution-spec-tests/blob/87ef9bee36585b5b9f72d6eaafeeb1999b641d3c/tests/tmp/tmptest_7b48c1f5_cdc8_4ff9_a1f6_c4e180ee27a2/test_reentrancy_selfdestruct_revert.py#L35"
+        },
+        "env" : {
+            "currentBaseFee" : "0x07",
+            "currentCoinbase" : "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentDifficulty" : "0x00",
+            "currentExcessBlobGas" : "0x00",
+            "currentGasLimit" : "0xff112233445566",
+            "currentNumber" : "0x01",
+            "currentRandom" : "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentTimestamp" : "0x03e8"
+        },
+        "post" : {
+            "Cancun" : [
+                {
+                    "hash" : "0xfc763872b761845845f0b78d8ad85fadb9d486fbe1f929e7c3857e1de74d7061",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf860800a8307a120948a0a19589531694250d570040a0c4b74576919b880801ca09a207ad45b7fc2aa5f8e72a30487f2b0bc489778e6d022f19036efdf2a922a17a0640d4da05078b5a4aa561f1b4d58176ea828bfa0f88d27d14459c1d789e1a1eb"
+                }
+            ]
+        },
+        "pre" : {
+            "0x1000000000000000000000000000000000000001" : {
+                "balance" : "0x29a2241af62c0000",
+                "code" : "0x6103e8ff",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x1000000000000000000000000000000000000002" : {
+                "balance" : "0x4563918244f40000",
+                "code" : "0x600060006000600060647310000000000000000000000000000000000000015af2600f0160005260206000fd",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x8a0a19589531694250d570040a0c4b74576919b8" : {
+                "balance" : "0x0de0b6b3a7640000",
+                "code" : "0x600060006000600060007310000000000000000000000000000000000000015af2600155600060006000600060007310000000000000000000000000000000000000025af16002553d600060003e600051600355",
+                "nonce" : "0x00",
+                "storage" : {
+                    "0x01" : "0x0100",
+                    "0x02" : "0x0100",
+                    "0x03" : "0x0100"
+                }
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {
+                "balance" : "0x6124fee993bc0000",
+                "code" : "0x",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            }
+        },
+        "transaction" : {
+            "data" : [
+                "0x"
+            ],
+            "gasLimit" : [
+                "0x07a120"
+            ],
+            "gasPrice" : "0x0a",
+            "nonce" : "0x00",
+            "secretKey" : "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8",
+            "sender" : "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "to" : "0x8a0a19589531694250d570040a0c4b74576919b8",
+            "value" : [
+                "0x00"
+            ]
+        }
+    },
+    "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Cancun-state_test-second_suicide_CALLCODE-first_suicide_CALL]" : {
+        "_info" : {
+            "comment" : "`execution-spec-tests` generated test",
+            "description" : "Test function documentation:\n\n    Suicide reentrancy scenario:\n\n    Call|Callcode|Delegatecall the contract S.\n    S self destructs.\n    Call the revert proxy contract R.\n    R Calls|Callcode|Delegatecall S.\n    S self destructs (for the second time).\n    R reverts (including the effects of the second selfdestruct).\n    It is expected the S is self destructed after the transaction.",
+            "filling-rpc-server" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "filling-tool-version" : "retesteth-0.3.2-cancun+commit.2a41f237.Linux.g++",
+            "filling-transition-tool" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "generatedTestHash" : "8c15bafa48a9c7855c7d52f01a2365e3e66ac78bd252a135d022ab1fc738ce37",
+            "hash" : "0x30d54b7064d70b3fe8094dcb8818583011a2328523018d3036b14b857fe99890",
+            "lllcversion" : "Version: 0.5.14-develop.2023.7.11+commit.c58ab2c6.mod.Linux.g++",
+            "solidity" : "Version: 0.8.21+commit.d9974bed.Linux.g++",
+            "source" : "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py",
+            "sourceHash" : "e2f4e511e7fa159efc349cb0c53c8ff499d77f037da177c53ee125e066fa4c10",
+            "url" : "https://github.com/ethereum/execution-spec-tests/blob/87ef9bee36585b5b9f72d6eaafeeb1999b641d3c/tests/tmp/tmptest_7b48c1f5_cdc8_4ff9_a1f6_c4e180ee27a2/test_reentrancy_selfdestruct_revert.py#L35"
+        },
+        "env" : {
+            "currentBaseFee" : "0x07",
+            "currentCoinbase" : "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentDifficulty" : "0x00",
+            "currentExcessBlobGas" : "0x00",
+            "currentGasLimit" : "0xff112233445566",
+            "currentNumber" : "0x01",
+            "currentRandom" : "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentTimestamp" : "0x03e8"
+        },
+        "post" : {
+            "Cancun" : [
+                {
+                    "hash" : "0x0d4ebc4d54ba8d96ce314de318463756ed1c77d238d9e7081f35c15b599911d6",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf860800a8307a120948a0a19589531694250d570040a0c4b74576919b880801ca09a207ad45b7fc2aa5f8e72a30487f2b0bc489778e6d022f19036efdf2a922a17a0640d4da05078b5a4aa561f1b4d58176ea828bfa0f88d27d14459c1d789e1a1eb"
+                }
+            ]
+        },
+        "pre" : {
+            "0x1000000000000000000000000000000000000001" : {
+                "balance" : "0x29a2241af62c0000",
+                "code" : "0x6103e8ff",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x1000000000000000000000000000000000000002" : {
+                "balance" : "0x4563918244f40000",
+                "code" : "0x600060006000600060647310000000000000000000000000000000000000015af2600f0160005260206000fd",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x8a0a19589531694250d570040a0c4b74576919b8" : {
+                "balance" : "0x0de0b6b3a7640000",
+                "code" : "0x600060006000600060007310000000000000000000000000000000000000015af1600155600060006000600060007310000000000000000000000000000000000000025af16002553d600060003e600051600355",
+                "nonce" : "0x00",
+                "storage" : {
+                    "0x01" : "0x0100",
+                    "0x02" : "0x0100",
+                    "0x03" : "0x0100"
+                }
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {
+                "balance" : "0x6124fee993bc0000",
+                "code" : "0x",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            }
+        },
+        "transaction" : {
+            "data" : [
+                "0x"
+            ],
+            "gasLimit" : [
+                "0x07a120"
+            ],
+            "gasPrice" : "0x0a",
+            "nonce" : "0x00",
+            "secretKey" : "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8",
+            "sender" : "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "to" : "0x8a0a19589531694250d570040a0c4b74576919b8",
+            "value" : [
+                "0x00"
+            ]
+        }
+    },
+    "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Cancun-state_test-second_suicide_CALLCODE-first_suicide_DELEGATECALL]" : {
+        "_info" : {
+            "comment" : "`execution-spec-tests` generated test",
+            "description" : "Test function documentation:\n\n    Suicide reentrancy scenario:\n\n    Call|Callcode|Delegatecall the contract S.\n    S self destructs.\n    Call the revert proxy contract R.\n    R Calls|Callcode|Delegatecall S.\n    S self destructs (for the second time).\n    R reverts (including the effects of the second selfdestruct).\n    It is expected the S is self destructed after the transaction.",
+            "filling-rpc-server" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "filling-tool-version" : "retesteth-0.3.2-cancun+commit.2a41f237.Linux.g++",
+            "filling-transition-tool" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "generatedTestHash" : "f9774beeda0c9511c6b8ce653a439b2e606f8c360e8307ef2676e0aab50c4e5f",
+            "hash" : "0x0f3a8895c20e2d829bf10b600863b5be9d500eedf4e696c5e8e1a293c6875605",
+            "lllcversion" : "Version: 0.5.14-develop.2023.7.11+commit.c58ab2c6.mod.Linux.g++",
+            "solidity" : "Version: 0.8.21+commit.d9974bed.Linux.g++",
+            "source" : "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py",
+            "sourceHash" : "e2f4e511e7fa159efc349cb0c53c8ff499d77f037da177c53ee125e066fa4c10",
+            "url" : "https://github.com/ethereum/execution-spec-tests/blob/87ef9bee36585b5b9f72d6eaafeeb1999b641d3c/tests/tmp/tmptest_7b48c1f5_cdc8_4ff9_a1f6_c4e180ee27a2/test_reentrancy_selfdestruct_revert.py#L35"
+        },
+        "env" : {
+            "currentBaseFee" : "0x07",
+            "currentCoinbase" : "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentDifficulty" : "0x00",
+            "currentExcessBlobGas" : "0x00",
+            "currentGasLimit" : "0xff112233445566",
+            "currentNumber" : "0x01",
+            "currentRandom" : "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentTimestamp" : "0x03e8"
+        },
+        "post" : {
+            "Cancun" : [
+                {
+                    "hash" : "0xa4f23b751f20f7d10079bd558ffae4d8c352b13ec7406833ff9406cfd7d42966",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf860800a8307a120948a0a19589531694250d570040a0c4b74576919b880801ca09a207ad45b7fc2aa5f8e72a30487f2b0bc489778e6d022f19036efdf2a922a17a0640d4da05078b5a4aa561f1b4d58176ea828bfa0f88d27d14459c1d789e1a1eb"
+                }
+            ]
+        },
+        "pre" : {
+            "0x1000000000000000000000000000000000000001" : {
+                "balance" : "0x29a2241af62c0000",
+                "code" : "0x6103e8ff",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x1000000000000000000000000000000000000002" : {
+                "balance" : "0x4563918244f40000",
+                "code" : "0x600060006000600060647310000000000000000000000000000000000000015af2600f0160005260206000fd",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x8a0a19589531694250d570040a0c4b74576919b8" : {
+                "balance" : "0x0de0b6b3a7640000",
+                "code" : "0x60006000600060007310000000000000000000000000000000000000015af4600155600060006000600060007310000000000000000000000000000000000000025af16002553d600060003e600051600355",
+                "nonce" : "0x00",
+                "storage" : {
+                    "0x01" : "0x0100",
+                    "0x02" : "0x0100",
+                    "0x03" : "0x0100"
+                }
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {
+                "balance" : "0x6124fee993bc0000",
+                "code" : "0x",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            }
+        },
+        "transaction" : {
+            "data" : [
+                "0x"
+            ],
+            "gasLimit" : [
+                "0x07a120"
+            ],
+            "gasPrice" : "0x0a",
+            "nonce" : "0x00",
+            "secretKey" : "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8",
+            "sender" : "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "to" : "0x8a0a19589531694250d570040a0c4b74576919b8",
+            "value" : [
+                "0x00"
+            ]
+        }
+    },
+    "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Cancun-state_test-second_suicide_DELEGATECALL-first_suicide_CALLCODE]" : {
+        "_info" : {
+            "comment" : "`execution-spec-tests` generated test",
+            "description" : "Test function documentation:\n\n    Suicide reentrancy scenario:\n\n    Call|Callcode|Delegatecall the contract S.\n    S self destructs.\n    Call the revert proxy contract R.\n    R Calls|Callcode|Delegatecall S.\n    S self destructs (for the second time).\n    R reverts (including the effects of the second selfdestruct).\n    It is expected the S is self destructed after the transaction.",
+            "filling-rpc-server" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "filling-tool-version" : "retesteth-0.3.2-cancun+commit.2a41f237.Linux.g++",
+            "filling-transition-tool" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "generatedTestHash" : "59ffc13a91787115b6cecacc638ee5adf4698297ff5aae041f8e92367b21f6a5",
+            "hash" : "0x3875516c6c076e20af00309e04ad2290032d4eab483d038284c6ba756f486948",
+            "lllcversion" : "Version: 0.5.14-develop.2023.7.11+commit.c58ab2c6.mod.Linux.g++",
+            "solidity" : "Version: 0.8.21+commit.d9974bed.Linux.g++",
+            "source" : "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py",
+            "sourceHash" : "e2f4e511e7fa159efc349cb0c53c8ff499d77f037da177c53ee125e066fa4c10",
+            "url" : "https://github.com/ethereum/execution-spec-tests/blob/87ef9bee36585b5b9f72d6eaafeeb1999b641d3c/tests/tmp/tmptest_7b48c1f5_cdc8_4ff9_a1f6_c4e180ee27a2/test_reentrancy_selfdestruct_revert.py#L35"
+        },
+        "env" : {
+            "currentBaseFee" : "0x07",
+            "currentCoinbase" : "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentDifficulty" : "0x00",
+            "currentExcessBlobGas" : "0x00",
+            "currentGasLimit" : "0xff112233445566",
+            "currentNumber" : "0x01",
+            "currentRandom" : "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentTimestamp" : "0x03e8"
+        },
+        "post" : {
+            "Cancun" : [
+                {
+                    "hash" : "0x79c1ed5acb26f6ab1651be99711cfb412cd21a54f1df48996e8dec9f6d0882a4",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf860800a8307a120948a0a19589531694250d570040a0c4b74576919b880801ca09a207ad45b7fc2aa5f8e72a30487f2b0bc489778e6d022f19036efdf2a922a17a0640d4da05078b5a4aa561f1b4d58176ea828bfa0f88d27d14459c1d789e1a1eb"
+                }
+            ]
+        },
+        "pre" : {
+            "0x1000000000000000000000000000000000000001" : {
+                "balance" : "0x29a2241af62c0000",
+                "code" : "0x6103e8ff",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x1000000000000000000000000000000000000002" : {
+                "balance" : "0x4563918244f40000",
+                "code" : "0x60006000600060647310000000000000000000000000000000000000015af4600f0160005260206000fd",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x8a0a19589531694250d570040a0c4b74576919b8" : {
+                "balance" : "0x0de0b6b3a7640000",
+                "code" : "0x600060006000600060007310000000000000000000000000000000000000015af2600155600060006000600060007310000000000000000000000000000000000000025af16002553d600060003e600051600355",
+                "nonce" : "0x00",
+                "storage" : {
+                    "0x01" : "0x0100",
+                    "0x02" : "0x0100",
+                    "0x03" : "0x0100"
+                }
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {
+                "balance" : "0x6124fee993bc0000",
+                "code" : "0x",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            }
+        },
+        "transaction" : {
+            "data" : [
+                "0x"
+            ],
+            "gasLimit" : [
+                "0x07a120"
+            ],
+            "gasPrice" : "0x0a",
+            "nonce" : "0x00",
+            "secretKey" : "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8",
+            "sender" : "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "to" : "0x8a0a19589531694250d570040a0c4b74576919b8",
+            "value" : [
+                "0x00"
+            ]
+        }
+    },
+    "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Cancun-state_test-second_suicide_DELEGATECALL-first_suicide_CALL]" : {
+        "_info" : {
+            "comment" : "`execution-spec-tests` generated test",
+            "description" : "Test function documentation:\n\n    Suicide reentrancy scenario:\n\n    Call|Callcode|Delegatecall the contract S.\n    S self destructs.\n    Call the revert proxy contract R.\n    R Calls|Callcode|Delegatecall S.\n    S self destructs (for the second time).\n    R reverts (including the effects of the second selfdestruct).\n    It is expected the S is self destructed after the transaction.",
+            "filling-rpc-server" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "filling-tool-version" : "retesteth-0.3.2-cancun+commit.2a41f237.Linux.g++",
+            "filling-transition-tool" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "generatedTestHash" : "94c898c89668d99031d6a236f6fe6c257fe8b26ad37d18735c30b4ea6d7bb840",
+            "hash" : "0x4fbb8b6bd0666f59abe31328f875e2adfe98cfb5b5070ac367d3bd93dd15e40f",
+            "lllcversion" : "Version: 0.5.14-develop.2023.7.11+commit.c58ab2c6.mod.Linux.g++",
+            "solidity" : "Version: 0.8.21+commit.d9974bed.Linux.g++",
+            "source" : "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py",
+            "sourceHash" : "e2f4e511e7fa159efc349cb0c53c8ff499d77f037da177c53ee125e066fa4c10",
+            "url" : "https://github.com/ethereum/execution-spec-tests/blob/87ef9bee36585b5b9f72d6eaafeeb1999b641d3c/tests/tmp/tmptest_7b48c1f5_cdc8_4ff9_a1f6_c4e180ee27a2/test_reentrancy_selfdestruct_revert.py#L35"
+        },
+        "env" : {
+            "currentBaseFee" : "0x07",
+            "currentCoinbase" : "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentDifficulty" : "0x00",
+            "currentExcessBlobGas" : "0x00",
+            "currentGasLimit" : "0xff112233445566",
+            "currentNumber" : "0x01",
+            "currentRandom" : "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentTimestamp" : "0x03e8"
+        },
+        "post" : {
+            "Cancun" : [
+                {
+                    "hash" : "0x28ec043a81588b2c621632c9655e4a2bee45d2aed3638ecd9c4c695e9df9cd28",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf860800a8307a120948a0a19589531694250d570040a0c4b74576919b880801ca09a207ad45b7fc2aa5f8e72a30487f2b0bc489778e6d022f19036efdf2a922a17a0640d4da05078b5a4aa561f1b4d58176ea828bfa0f88d27d14459c1d789e1a1eb"
+                }
+            ]
+        },
+        "pre" : {
+            "0x1000000000000000000000000000000000000001" : {
+                "balance" : "0x29a2241af62c0000",
+                "code" : "0x6103e8ff",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x1000000000000000000000000000000000000002" : {
+                "balance" : "0x4563918244f40000",
+                "code" : "0x60006000600060647310000000000000000000000000000000000000015af4600f0160005260206000fd",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x8a0a19589531694250d570040a0c4b74576919b8" : {
+                "balance" : "0x0de0b6b3a7640000",
+                "code" : "0x600060006000600060007310000000000000000000000000000000000000015af1600155600060006000600060007310000000000000000000000000000000000000025af16002553d600060003e600051600355",
+                "nonce" : "0x00",
+                "storage" : {
+                    "0x01" : "0x0100",
+                    "0x02" : "0x0100",
+                    "0x03" : "0x0100"
+                }
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {
+                "balance" : "0x6124fee993bc0000",
+                "code" : "0x",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            }
+        },
+        "transaction" : {
+            "data" : [
+                "0x"
+            ],
+            "gasLimit" : [
+                "0x07a120"
+            ],
+            "gasPrice" : "0x0a",
+            "nonce" : "0x00",
+            "secretKey" : "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8",
+            "sender" : "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "to" : "0x8a0a19589531694250d570040a0c4b74576919b8",
+            "value" : [
+                "0x00"
+            ]
+        }
+    },
+    "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Cancun-state_test-second_suicide_DELEGATECALL-first_suicide_DELEGATECALL]" : {
+        "_info" : {
+            "comment" : "`execution-spec-tests` generated test",
+            "description" : "Test function documentation:\n\n    Suicide reentrancy scenario:\n\n    Call|Callcode|Delegatecall the contract S.\n    S self destructs.\n    Call the revert proxy contract R.\n    R Calls|Callcode|Delegatecall S.\n    S self destructs (for the second time).\n    R reverts (including the effects of the second selfdestruct).\n    It is expected the S is self destructed after the transaction.",
+            "filling-rpc-server" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "filling-tool-version" : "retesteth-0.3.2-cancun+commit.2a41f237.Linux.g++",
+            "filling-transition-tool" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "generatedTestHash" : "cc714840d69ff025378d9f3ede26c15ce20b179af7657a32f134bb05158a2f98",
+            "hash" : "0xcefc365ce0e7be5787f3e2a619232c0b45bc2098d5555c058ede07c514406c05",
+            "lllcversion" : "Version: 0.5.14-develop.2023.7.11+commit.c58ab2c6.mod.Linux.g++",
+            "solidity" : "Version: 0.8.21+commit.d9974bed.Linux.g++",
+            "source" : "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py",
+            "sourceHash" : "e2f4e511e7fa159efc349cb0c53c8ff499d77f037da177c53ee125e066fa4c10",
+            "url" : "https://github.com/ethereum/execution-spec-tests/blob/87ef9bee36585b5b9f72d6eaafeeb1999b641d3c/tests/tmp/tmptest_7b48c1f5_cdc8_4ff9_a1f6_c4e180ee27a2/test_reentrancy_selfdestruct_revert.py#L35"
+        },
+        "env" : {
+            "currentBaseFee" : "0x07",
+            "currentCoinbase" : "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentDifficulty" : "0x00",
+            "currentExcessBlobGas" : "0x00",
+            "currentGasLimit" : "0xff112233445566",
+            "currentNumber" : "0x01",
+            "currentRandom" : "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentTimestamp" : "0x03e8"
+        },
+        "post" : {
+            "Cancun" : [
+                {
+                    "hash" : "0xf32a585c2df32f9cbe5f9460aac40aac2103eac9b7e97187b8fe10dbbead8b02",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf860800a8307a120948a0a19589531694250d570040a0c4b74576919b880801ca09a207ad45b7fc2aa5f8e72a30487f2b0bc489778e6d022f19036efdf2a922a17a0640d4da05078b5a4aa561f1b4d58176ea828bfa0f88d27d14459c1d789e1a1eb"
+                }
+            ]
+        },
+        "pre" : {
+            "0x1000000000000000000000000000000000000001" : {
+                "balance" : "0x29a2241af62c0000",
+                "code" : "0x6103e8ff",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x1000000000000000000000000000000000000002" : {
+                "balance" : "0x4563918244f40000",
+                "code" : "0x60006000600060647310000000000000000000000000000000000000015af4600f0160005260206000fd",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x8a0a19589531694250d570040a0c4b74576919b8" : {
+                "balance" : "0x0de0b6b3a7640000",
+                "code" : "0x60006000600060007310000000000000000000000000000000000000015af4600155600060006000600060007310000000000000000000000000000000000000025af16002553d600060003e600051600355",
+                "nonce" : "0x00",
+                "storage" : {
+                    "0x01" : "0x0100",
+                    "0x02" : "0x0100",
+                    "0x03" : "0x0100"
+                }
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {
+                "balance" : "0x6124fee993bc0000",
+                "code" : "0x",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            }
+        },
+        "transaction" : {
+            "data" : [
+                "0x"
+            ],
+            "gasLimit" : [
+                "0x07a120"
+            ],
+            "gasPrice" : "0x0a",
+            "nonce" : "0x00",
+            "secretKey" : "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8",
+            "sender" : "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "to" : "0x8a0a19589531694250d570040a0c4b74576919b8",
+            "value" : [
+                "0x00"
+            ]
+        }
+    },
+    "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Paris-state_test-second_suicide_CALL-first_suicide_CALLCODE]" : {
+        "_info" : {
+            "comment" : "`execution-spec-tests` generated test",
+            "description" : "Test function documentation:\n\n    Suicide reentrancy scenario:\n\n    Call|Callcode|Delegatecall the contract S.\n    S self destructs.\n    Call the revert proxy contract R.\n    R Calls|Callcode|Delegatecall S.\n    S self destructs (for the second time).\n    R reverts (including the effects of the second selfdestruct).\n    It is expected the S is self destructed after the transaction.",
+            "filling-rpc-server" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "filling-tool-version" : "retesteth-0.3.2-cancun+commit.2a41f237.Linux.g++",
+            "filling-transition-tool" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "generatedTestHash" : "d1b7fb02f928078143cd56ae3b4083f3c1a17aaa70e1f7b2cfa5821cfffd761d",
+            "hash" : "0xf7c84c7384f9ba4b4c3c9778c70fd6eaead88ee6106fd3e0b6ec97729cd5a0df",
+            "lllcversion" : "Version: 0.5.14-develop.2023.7.11+commit.c58ab2c6.mod.Linux.g++",
+            "solidity" : "Version: 0.8.21+commit.d9974bed.Linux.g++",
+            "source" : "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py",
+            "sourceHash" : "e2f4e511e7fa159efc349cb0c53c8ff499d77f037da177c53ee125e066fa4c10",
+            "url" : "https://github.com/ethereum/execution-spec-tests/blob/87ef9bee36585b5b9f72d6eaafeeb1999b641d3c/tests/tmp/tmptest_7b48c1f5_cdc8_4ff9_a1f6_c4e180ee27a2/test_reentrancy_selfdestruct_revert.py#L35"
+        },
+        "env" : {
+            "currentBaseFee" : "0x07",
+            "currentCoinbase" : "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentDifficulty" : "0x00",
+            "currentGasLimit" : "0xff112233445566",
+            "currentNumber" : "0x01",
+            "currentRandom" : "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentTimestamp" : "0x03e8"
+        },
+        "post" : {
+            "Paris" : [
+                {
+                    "hash" : "0xb3884183528c49f388d9ef14920ea125c2309605d455b396c84d8a44ad895aca",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf860800a8307a120948a0a19589531694250d570040a0c4b74576919b880801ca09a207ad45b7fc2aa5f8e72a30487f2b0bc489778e6d022f19036efdf2a922a17a0640d4da05078b5a4aa561f1b4d58176ea828bfa0f88d27d14459c1d789e1a1eb"
+                }
+            ]
+        },
+        "pre" : {
+            "0x1000000000000000000000000000000000000001" : {
+                "balance" : "0x29a2241af62c0000",
+                "code" : "0x6103e8ff",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x1000000000000000000000000000000000000002" : {
+                "balance" : "0x4563918244f40000",
+                "code" : "0x600060006000600060647310000000000000000000000000000000000000015af1600f0160005260206000fd",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x8a0a19589531694250d570040a0c4b74576919b8" : {
+                "balance" : "0x0de0b6b3a7640000",
+                "code" : "0x600060006000600060007310000000000000000000000000000000000000015af2600155600060006000600060007310000000000000000000000000000000000000025af16002553d600060003e600051600355",
+                "nonce" : "0x00",
+                "storage" : {
+                    "0x01" : "0x0100",
+                    "0x02" : "0x0100",
+                    "0x03" : "0x0100"
+                }
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {
+                "balance" : "0x6124fee993bc0000",
+                "code" : "0x",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            }
+        },
+        "transaction" : {
+            "data" : [
+                "0x"
+            ],
+            "gasLimit" : [
+                "0x07a120"
+            ],
+            "gasPrice" : "0x0a",
+            "nonce" : "0x00",
+            "secretKey" : "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8",
+            "sender" : "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "to" : "0x8a0a19589531694250d570040a0c4b74576919b8",
+            "value" : [
+                "0x00"
+            ]
+        }
+    },
+    "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Paris-state_test-second_suicide_CALL-first_suicide_CALL]" : {
+        "_info" : {
+            "comment" : "`execution-spec-tests` generated test",
+            "description" : "Test function documentation:\n\n    Suicide reentrancy scenario:\n\n    Call|Callcode|Delegatecall the contract S.\n    S self destructs.\n    Call the revert proxy contract R.\n    R Calls|Callcode|Delegatecall S.\n    S self destructs (for the second time).\n    R reverts (including the effects of the second selfdestruct).\n    It is expected the S is self destructed after the transaction.",
+            "filling-rpc-server" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "filling-tool-version" : "retesteth-0.3.2-cancun+commit.2a41f237.Linux.g++",
+            "filling-transition-tool" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "generatedTestHash" : "3c6efd2f6f4b6d6440f7fd70cc1a185c83f9d23d7a0eb44e5896cadcebdf2804",
+            "hash" : "0x12a52997fcc1b7c0955b6e60646a967208c4b248ebde8e1fc15236cc6fc51091",
+            "lllcversion" : "Version: 0.5.14-develop.2023.7.11+commit.c58ab2c6.mod.Linux.g++",
+            "solidity" : "Version: 0.8.21+commit.d9974bed.Linux.g++",
+            "source" : "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py",
+            "sourceHash" : "e2f4e511e7fa159efc349cb0c53c8ff499d77f037da177c53ee125e066fa4c10",
+            "url" : "https://github.com/ethereum/execution-spec-tests/blob/87ef9bee36585b5b9f72d6eaafeeb1999b641d3c/tests/tmp/tmptest_7b48c1f5_cdc8_4ff9_a1f6_c4e180ee27a2/test_reentrancy_selfdestruct_revert.py#L35"
+        },
+        "env" : {
+            "currentBaseFee" : "0x07",
+            "currentCoinbase" : "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentDifficulty" : "0x00",
+            "currentGasLimit" : "0xff112233445566",
+            "currentNumber" : "0x01",
+            "currentRandom" : "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentTimestamp" : "0x03e8"
+        },
+        "post" : {
+            "Paris" : [
+                {
+                    "hash" : "0xccb82768fb01f42f158e0735788484d84630aeccfef9d72028fba43971c4b3ab",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf860800a8307a120948a0a19589531694250d570040a0c4b74576919b880801ca09a207ad45b7fc2aa5f8e72a30487f2b0bc489778e6d022f19036efdf2a922a17a0640d4da05078b5a4aa561f1b4d58176ea828bfa0f88d27d14459c1d789e1a1eb"
+                }
+            ]
+        },
+        "pre" : {
+            "0x1000000000000000000000000000000000000001" : {
+                "balance" : "0x29a2241af62c0000",
+                "code" : "0x6103e8ff",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x1000000000000000000000000000000000000002" : {
+                "balance" : "0x4563918244f40000",
+                "code" : "0x600060006000600060647310000000000000000000000000000000000000015af1600f0160005260206000fd",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x8a0a19589531694250d570040a0c4b74576919b8" : {
+                "balance" : "0x0de0b6b3a7640000",
+                "code" : "0x600060006000600060007310000000000000000000000000000000000000015af1600155600060006000600060007310000000000000000000000000000000000000025af16002553d600060003e600051600355",
+                "nonce" : "0x00",
+                "storage" : {
+                    "0x01" : "0x0100",
+                    "0x02" : "0x0100",
+                    "0x03" : "0x0100"
+                }
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {
+                "balance" : "0x6124fee993bc0000",
+                "code" : "0x",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            }
+        },
+        "transaction" : {
+            "data" : [
+                "0x"
+            ],
+            "gasLimit" : [
+                "0x07a120"
+            ],
+            "gasPrice" : "0x0a",
+            "nonce" : "0x00",
+            "secretKey" : "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8",
+            "sender" : "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "to" : "0x8a0a19589531694250d570040a0c4b74576919b8",
+            "value" : [
+                "0x00"
+            ]
+        }
+    },
+    "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Paris-state_test-second_suicide_CALL-first_suicide_DELEGATECALL]" : {
+        "_info" : {
+            "comment" : "`execution-spec-tests` generated test",
+            "description" : "Test function documentation:\n\n    Suicide reentrancy scenario:\n\n    Call|Callcode|Delegatecall the contract S.\n    S self destructs.\n    Call the revert proxy contract R.\n    R Calls|Callcode|Delegatecall S.\n    S self destructs (for the second time).\n    R reverts (including the effects of the second selfdestruct).\n    It is expected the S is self destructed after the transaction.",
+            "filling-rpc-server" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "filling-tool-version" : "retesteth-0.3.2-cancun+commit.2a41f237.Linux.g++",
+            "filling-transition-tool" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "generatedTestHash" : "7c982822f2953f51b57de96245d384f8ba4b2054a0505c07aac2ce40c7e91123",
+            "hash" : "0xf1ee82c956c94d2d3744bfa4d1def650e0cea97299d3b136b8bab6c1e0d149e6",
+            "lllcversion" : "Version: 0.5.14-develop.2023.7.11+commit.c58ab2c6.mod.Linux.g++",
+            "solidity" : "Version: 0.8.21+commit.d9974bed.Linux.g++",
+            "source" : "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py",
+            "sourceHash" : "e2f4e511e7fa159efc349cb0c53c8ff499d77f037da177c53ee125e066fa4c10",
+            "url" : "https://github.com/ethereum/execution-spec-tests/blob/87ef9bee36585b5b9f72d6eaafeeb1999b641d3c/tests/tmp/tmptest_7b48c1f5_cdc8_4ff9_a1f6_c4e180ee27a2/test_reentrancy_selfdestruct_revert.py#L35"
+        },
+        "env" : {
+            "currentBaseFee" : "0x07",
+            "currentCoinbase" : "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentDifficulty" : "0x00",
+            "currentGasLimit" : "0xff112233445566",
+            "currentNumber" : "0x01",
+            "currentRandom" : "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentTimestamp" : "0x03e8"
+        },
+        "post" : {
+            "Paris" : [
+                {
+                    "hash" : "0x5aeabce9e84c80a26ccd5fc8640231a918a4daa521d1f7b09f1ae45c83c209b2",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf860800a8307a120948a0a19589531694250d570040a0c4b74576919b880801ca09a207ad45b7fc2aa5f8e72a30487f2b0bc489778e6d022f19036efdf2a922a17a0640d4da05078b5a4aa561f1b4d58176ea828bfa0f88d27d14459c1d789e1a1eb"
+                }
+            ]
+        },
+        "pre" : {
+            "0x1000000000000000000000000000000000000001" : {
+                "balance" : "0x29a2241af62c0000",
+                "code" : "0x6103e8ff",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x1000000000000000000000000000000000000002" : {
+                "balance" : "0x4563918244f40000",
+                "code" : "0x600060006000600060647310000000000000000000000000000000000000015af1600f0160005260206000fd",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x8a0a19589531694250d570040a0c4b74576919b8" : {
+                "balance" : "0x0de0b6b3a7640000",
+                "code" : "0x60006000600060007310000000000000000000000000000000000000015af4600155600060006000600060007310000000000000000000000000000000000000025af16002553d600060003e600051600355",
+                "nonce" : "0x00",
+                "storage" : {
+                    "0x01" : "0x0100",
+                    "0x02" : "0x0100",
+                    "0x03" : "0x0100"
+                }
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {
+                "balance" : "0x6124fee993bc0000",
+                "code" : "0x",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            }
+        },
+        "transaction" : {
+            "data" : [
+                "0x"
+            ],
+            "gasLimit" : [
+                "0x07a120"
+            ],
+            "gasPrice" : "0x0a",
+            "nonce" : "0x00",
+            "secretKey" : "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8",
+            "sender" : "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "to" : "0x8a0a19589531694250d570040a0c4b74576919b8",
+            "value" : [
+                "0x00"
+            ]
+        }
+    },
+    "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Paris-state_test-second_suicide_CALLCODE-first_suicide_CALLCODE]" : {
+        "_info" : {
+            "comment" : "`execution-spec-tests` generated test",
+            "description" : "Test function documentation:\n\n    Suicide reentrancy scenario:\n\n    Call|Callcode|Delegatecall the contract S.\n    S self destructs.\n    Call the revert proxy contract R.\n    R Calls|Callcode|Delegatecall S.\n    S self destructs (for the second time).\n    R reverts (including the effects of the second selfdestruct).\n    It is expected the S is self destructed after the transaction.",
+            "filling-rpc-server" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "filling-tool-version" : "retesteth-0.3.2-cancun+commit.2a41f237.Linux.g++",
+            "filling-transition-tool" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "generatedTestHash" : "9bfda48a330851fdda003304db13722eb5df6a5a288a43a033562089f8868de8",
+            "hash" : "0x333b39fd817e470dad967d32b48353f8ee22ad6ab4c182e37e1dcc375e904081",
+            "lllcversion" : "Version: 0.5.14-develop.2023.7.11+commit.c58ab2c6.mod.Linux.g++",
+            "solidity" : "Version: 0.8.21+commit.d9974bed.Linux.g++",
+            "source" : "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py",
+            "sourceHash" : "e2f4e511e7fa159efc349cb0c53c8ff499d77f037da177c53ee125e066fa4c10",
+            "url" : "https://github.com/ethereum/execution-spec-tests/blob/87ef9bee36585b5b9f72d6eaafeeb1999b641d3c/tests/tmp/tmptest_7b48c1f5_cdc8_4ff9_a1f6_c4e180ee27a2/test_reentrancy_selfdestruct_revert.py#L35"
+        },
+        "env" : {
+            "currentBaseFee" : "0x07",
+            "currentCoinbase" : "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentDifficulty" : "0x00",
+            "currentGasLimit" : "0xff112233445566",
+            "currentNumber" : "0x01",
+            "currentRandom" : "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentTimestamp" : "0x03e8"
+        },
+        "post" : {
+            "Paris" : [
+                {
+                    "hash" : "0x530f07050074b60959c2e810d9596f00afbf270a9d3ea9071d32e976117e0297",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf860800a8307a120948a0a19589531694250d570040a0c4b74576919b880801ca09a207ad45b7fc2aa5f8e72a30487f2b0bc489778e6d022f19036efdf2a922a17a0640d4da05078b5a4aa561f1b4d58176ea828bfa0f88d27d14459c1d789e1a1eb"
+                }
+            ]
+        },
+        "pre" : {
+            "0x1000000000000000000000000000000000000001" : {
+                "balance" : "0x29a2241af62c0000",
+                "code" : "0x6103e8ff",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x1000000000000000000000000000000000000002" : {
+                "balance" : "0x4563918244f40000",
+                "code" : "0x600060006000600060647310000000000000000000000000000000000000015af2600f0160005260206000fd",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x8a0a19589531694250d570040a0c4b74576919b8" : {
+                "balance" : "0x0de0b6b3a7640000",
+                "code" : "0x600060006000600060007310000000000000000000000000000000000000015af2600155600060006000600060007310000000000000000000000000000000000000025af16002553d600060003e600051600355",
+                "nonce" : "0x00",
+                "storage" : {
+                    "0x01" : "0x0100",
+                    "0x02" : "0x0100",
+                    "0x03" : "0x0100"
+                }
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {
+                "balance" : "0x6124fee993bc0000",
+                "code" : "0x",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            }
+        },
+        "transaction" : {
+            "data" : [
+                "0x"
+            ],
+            "gasLimit" : [
+                "0x07a120"
+            ],
+            "gasPrice" : "0x0a",
+            "nonce" : "0x00",
+            "secretKey" : "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8",
+            "sender" : "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "to" : "0x8a0a19589531694250d570040a0c4b74576919b8",
+            "value" : [
+                "0x00"
+            ]
+        }
+    },
+    "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Paris-state_test-second_suicide_CALLCODE-first_suicide_CALL]" : {
+        "_info" : {
+            "comment" : "`execution-spec-tests` generated test",
+            "description" : "Test function documentation:\n\n    Suicide reentrancy scenario:\n\n    Call|Callcode|Delegatecall the contract S.\n    S self destructs.\n    Call the revert proxy contract R.\n    R Calls|Callcode|Delegatecall S.\n    S self destructs (for the second time).\n    R reverts (including the effects of the second selfdestruct).\n    It is expected the S is self destructed after the transaction.",
+            "filling-rpc-server" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "filling-tool-version" : "retesteth-0.3.2-cancun+commit.2a41f237.Linux.g++",
+            "filling-transition-tool" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "generatedTestHash" : "bd7ffedfc7b505a748972aca9c7022ae6bd7badedd22e4c0c7558adda8e6ea95",
+            "hash" : "0x02e7d411bdb310e5493a89c05a80142759352ab0fe2166a90f8bcfee15ef4bbb",
+            "lllcversion" : "Version: 0.5.14-develop.2023.7.11+commit.c58ab2c6.mod.Linux.g++",
+            "solidity" : "Version: 0.8.21+commit.d9974bed.Linux.g++",
+            "source" : "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py",
+            "sourceHash" : "e2f4e511e7fa159efc349cb0c53c8ff499d77f037da177c53ee125e066fa4c10",
+            "url" : "https://github.com/ethereum/execution-spec-tests/blob/87ef9bee36585b5b9f72d6eaafeeb1999b641d3c/tests/tmp/tmptest_7b48c1f5_cdc8_4ff9_a1f6_c4e180ee27a2/test_reentrancy_selfdestruct_revert.py#L35"
+        },
+        "env" : {
+            "currentBaseFee" : "0x07",
+            "currentCoinbase" : "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentDifficulty" : "0x00",
+            "currentGasLimit" : "0xff112233445566",
+            "currentNumber" : "0x01",
+            "currentRandom" : "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentTimestamp" : "0x03e8"
+        },
+        "post" : {
+            "Paris" : [
+                {
+                    "hash" : "0x62f0b13b24b9143a2baf7264f43bea830cf4e5daa27e873cbedaba1c5df1b724",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf860800a8307a120948a0a19589531694250d570040a0c4b74576919b880801ca09a207ad45b7fc2aa5f8e72a30487f2b0bc489778e6d022f19036efdf2a922a17a0640d4da05078b5a4aa561f1b4d58176ea828bfa0f88d27d14459c1d789e1a1eb"
+                }
+            ]
+        },
+        "pre" : {
+            "0x1000000000000000000000000000000000000001" : {
+                "balance" : "0x29a2241af62c0000",
+                "code" : "0x6103e8ff",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x1000000000000000000000000000000000000002" : {
+                "balance" : "0x4563918244f40000",
+                "code" : "0x600060006000600060647310000000000000000000000000000000000000015af2600f0160005260206000fd",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x8a0a19589531694250d570040a0c4b74576919b8" : {
+                "balance" : "0x0de0b6b3a7640000",
+                "code" : "0x600060006000600060007310000000000000000000000000000000000000015af1600155600060006000600060007310000000000000000000000000000000000000025af16002553d600060003e600051600355",
+                "nonce" : "0x00",
+                "storage" : {
+                    "0x01" : "0x0100",
+                    "0x02" : "0x0100",
+                    "0x03" : "0x0100"
+                }
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {
+                "balance" : "0x6124fee993bc0000",
+                "code" : "0x",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            }
+        },
+        "transaction" : {
+            "data" : [
+                "0x"
+            ],
+            "gasLimit" : [
+                "0x07a120"
+            ],
+            "gasPrice" : "0x0a",
+            "nonce" : "0x00",
+            "secretKey" : "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8",
+            "sender" : "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "to" : "0x8a0a19589531694250d570040a0c4b74576919b8",
+            "value" : [
+                "0x00"
+            ]
+        }
+    },
+    "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Paris-state_test-second_suicide_CALLCODE-first_suicide_DELEGATECALL]" : {
+        "_info" : {
+            "comment" : "`execution-spec-tests` generated test",
+            "description" : "Test function documentation:\n\n    Suicide reentrancy scenario:\n\n    Call|Callcode|Delegatecall the contract S.\n    S self destructs.\n    Call the revert proxy contract R.\n    R Calls|Callcode|Delegatecall S.\n    S self destructs (for the second time).\n    R reverts (including the effects of the second selfdestruct).\n    It is expected the S is self destructed after the transaction.",
+            "filling-rpc-server" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "filling-tool-version" : "retesteth-0.3.2-cancun+commit.2a41f237.Linux.g++",
+            "filling-transition-tool" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "generatedTestHash" : "da6d43ad804a66b44216f5a0591f6741dd55aa750374eb551735ecc1d9bdeed1",
+            "hash" : "0xebf1540e2d4ce648188da094ffac0b73ddd5185fe3379b59fe124089aca29895",
+            "lllcversion" : "Version: 0.5.14-develop.2023.7.11+commit.c58ab2c6.mod.Linux.g++",
+            "solidity" : "Version: 0.8.21+commit.d9974bed.Linux.g++",
+            "source" : "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py",
+            "sourceHash" : "e2f4e511e7fa159efc349cb0c53c8ff499d77f037da177c53ee125e066fa4c10",
+            "url" : "https://github.com/ethereum/execution-spec-tests/blob/87ef9bee36585b5b9f72d6eaafeeb1999b641d3c/tests/tmp/tmptest_7b48c1f5_cdc8_4ff9_a1f6_c4e180ee27a2/test_reentrancy_selfdestruct_revert.py#L35"
+        },
+        "env" : {
+            "currentBaseFee" : "0x07",
+            "currentCoinbase" : "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentDifficulty" : "0x00",
+            "currentGasLimit" : "0xff112233445566",
+            "currentNumber" : "0x01",
+            "currentRandom" : "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentTimestamp" : "0x03e8"
+        },
+        "post" : {
+            "Paris" : [
+                {
+                    "hash" : "0x639170e86f88db4819f56d81c49f5f3c43ba72a70d33163f7a756d904c00a340",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf860800a8307a120948a0a19589531694250d570040a0c4b74576919b880801ca09a207ad45b7fc2aa5f8e72a30487f2b0bc489778e6d022f19036efdf2a922a17a0640d4da05078b5a4aa561f1b4d58176ea828bfa0f88d27d14459c1d789e1a1eb"
+                }
+            ]
+        },
+        "pre" : {
+            "0x1000000000000000000000000000000000000001" : {
+                "balance" : "0x29a2241af62c0000",
+                "code" : "0x6103e8ff",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x1000000000000000000000000000000000000002" : {
+                "balance" : "0x4563918244f40000",
+                "code" : "0x600060006000600060647310000000000000000000000000000000000000015af2600f0160005260206000fd",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x8a0a19589531694250d570040a0c4b74576919b8" : {
+                "balance" : "0x0de0b6b3a7640000",
+                "code" : "0x60006000600060007310000000000000000000000000000000000000015af4600155600060006000600060007310000000000000000000000000000000000000025af16002553d600060003e600051600355",
+                "nonce" : "0x00",
+                "storage" : {
+                    "0x01" : "0x0100",
+                    "0x02" : "0x0100",
+                    "0x03" : "0x0100"
+                }
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {
+                "balance" : "0x6124fee993bc0000",
+                "code" : "0x",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            }
+        },
+        "transaction" : {
+            "data" : [
+                "0x"
+            ],
+            "gasLimit" : [
+                "0x07a120"
+            ],
+            "gasPrice" : "0x0a",
+            "nonce" : "0x00",
+            "secretKey" : "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8",
+            "sender" : "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "to" : "0x8a0a19589531694250d570040a0c4b74576919b8",
+            "value" : [
+                "0x00"
+            ]
+        }
+    },
+    "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Paris-state_test-second_suicide_DELEGATECALL-first_suicide_CALLCODE]" : {
+        "_info" : {
+            "comment" : "`execution-spec-tests` generated test",
+            "description" : "Test function documentation:\n\n    Suicide reentrancy scenario:\n\n    Call|Callcode|Delegatecall the contract S.\n    S self destructs.\n    Call the revert proxy contract R.\n    R Calls|Callcode|Delegatecall S.\n    S self destructs (for the second time).\n    R reverts (including the effects of the second selfdestruct).\n    It is expected the S is self destructed after the transaction.",
+            "filling-rpc-server" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "filling-tool-version" : "retesteth-0.3.2-cancun+commit.2a41f237.Linux.g++",
+            "filling-transition-tool" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "generatedTestHash" : "fe389d0276e1354a8f934fdebcdbc860eb3cc0ace9ed1f5d5644c427f2cbe12f",
+            "hash" : "0xaf497fc89902d29a1d2a406393734d49a47434bc95bd3ed4724cba2d5cdcbf42",
+            "lllcversion" : "Version: 0.5.14-develop.2023.7.11+commit.c58ab2c6.mod.Linux.g++",
+            "solidity" : "Version: 0.8.21+commit.d9974bed.Linux.g++",
+            "source" : "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py",
+            "sourceHash" : "e2f4e511e7fa159efc349cb0c53c8ff499d77f037da177c53ee125e066fa4c10",
+            "url" : "https://github.com/ethereum/execution-spec-tests/blob/87ef9bee36585b5b9f72d6eaafeeb1999b641d3c/tests/tmp/tmptest_7b48c1f5_cdc8_4ff9_a1f6_c4e180ee27a2/test_reentrancy_selfdestruct_revert.py#L35"
+        },
+        "env" : {
+            "currentBaseFee" : "0x07",
+            "currentCoinbase" : "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentDifficulty" : "0x00",
+            "currentGasLimit" : "0xff112233445566",
+            "currentNumber" : "0x01",
+            "currentRandom" : "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentTimestamp" : "0x03e8"
+        },
+        "post" : {
+            "Paris" : [
+                {
+                    "hash" : "0xbaf248065226cf295d0be9572c7755690119798beac037743f473f27195f7e10",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf860800a8307a120948a0a19589531694250d570040a0c4b74576919b880801ca09a207ad45b7fc2aa5f8e72a30487f2b0bc489778e6d022f19036efdf2a922a17a0640d4da05078b5a4aa561f1b4d58176ea828bfa0f88d27d14459c1d789e1a1eb"
+                }
+            ]
+        },
+        "pre" : {
+            "0x1000000000000000000000000000000000000001" : {
+                "balance" : "0x29a2241af62c0000",
+                "code" : "0x6103e8ff",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x1000000000000000000000000000000000000002" : {
+                "balance" : "0x4563918244f40000",
+                "code" : "0x60006000600060647310000000000000000000000000000000000000015af4600f0160005260206000fd",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x8a0a19589531694250d570040a0c4b74576919b8" : {
+                "balance" : "0x0de0b6b3a7640000",
+                "code" : "0x600060006000600060007310000000000000000000000000000000000000015af2600155600060006000600060007310000000000000000000000000000000000000025af16002553d600060003e600051600355",
+                "nonce" : "0x00",
+                "storage" : {
+                    "0x01" : "0x0100",
+                    "0x02" : "0x0100",
+                    "0x03" : "0x0100"
+                }
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {
+                "balance" : "0x6124fee993bc0000",
+                "code" : "0x",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            }
+        },
+        "transaction" : {
+            "data" : [
+                "0x"
+            ],
+            "gasLimit" : [
+                "0x07a120"
+            ],
+            "gasPrice" : "0x0a",
+            "nonce" : "0x00",
+            "secretKey" : "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8",
+            "sender" : "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "to" : "0x8a0a19589531694250d570040a0c4b74576919b8",
+            "value" : [
+                "0x00"
+            ]
+        }
+    },
+    "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Paris-state_test-second_suicide_DELEGATECALL-first_suicide_CALL]" : {
+        "_info" : {
+            "comment" : "`execution-spec-tests` generated test",
+            "description" : "Test function documentation:\n\n    Suicide reentrancy scenario:\n\n    Call|Callcode|Delegatecall the contract S.\n    S self destructs.\n    Call the revert proxy contract R.\n    R Calls|Callcode|Delegatecall S.\n    S self destructs (for the second time).\n    R reverts (including the effects of the second selfdestruct).\n    It is expected the S is self destructed after the transaction.",
+            "filling-rpc-server" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "filling-tool-version" : "retesteth-0.3.2-cancun+commit.2a41f237.Linux.g++",
+            "filling-transition-tool" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "generatedTestHash" : "1650a1174105999c2ee227ec439ebe4556acf6d8ef2e43594fa383f30c9f9b8c",
+            "hash" : "0xe8eb8922f0c65d794bd5cbef65236c692228be007d46ad0d85c162536c553392",
+            "lllcversion" : "Version: 0.5.14-develop.2023.7.11+commit.c58ab2c6.mod.Linux.g++",
+            "solidity" : "Version: 0.8.21+commit.d9974bed.Linux.g++",
+            "source" : "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py",
+            "sourceHash" : "e2f4e511e7fa159efc349cb0c53c8ff499d77f037da177c53ee125e066fa4c10",
+            "url" : "https://github.com/ethereum/execution-spec-tests/blob/87ef9bee36585b5b9f72d6eaafeeb1999b641d3c/tests/tmp/tmptest_7b48c1f5_cdc8_4ff9_a1f6_c4e180ee27a2/test_reentrancy_selfdestruct_revert.py#L35"
+        },
+        "env" : {
+            "currentBaseFee" : "0x07",
+            "currentCoinbase" : "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentDifficulty" : "0x00",
+            "currentGasLimit" : "0xff112233445566",
+            "currentNumber" : "0x01",
+            "currentRandom" : "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentTimestamp" : "0x03e8"
+        },
+        "post" : {
+            "Paris" : [
+                {
+                    "hash" : "0x6fc5bc0bc96b5d5cc285ef402303275fcf40330865776d0bcd6cc313b7ce4d87",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf860800a8307a120948a0a19589531694250d570040a0c4b74576919b880801ca09a207ad45b7fc2aa5f8e72a30487f2b0bc489778e6d022f19036efdf2a922a17a0640d4da05078b5a4aa561f1b4d58176ea828bfa0f88d27d14459c1d789e1a1eb"
+                }
+            ]
+        },
+        "pre" : {
+            "0x1000000000000000000000000000000000000001" : {
+                "balance" : "0x29a2241af62c0000",
+                "code" : "0x6103e8ff",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x1000000000000000000000000000000000000002" : {
+                "balance" : "0x4563918244f40000",
+                "code" : "0x60006000600060647310000000000000000000000000000000000000015af4600f0160005260206000fd",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x8a0a19589531694250d570040a0c4b74576919b8" : {
+                "balance" : "0x0de0b6b3a7640000",
+                "code" : "0x600060006000600060007310000000000000000000000000000000000000015af1600155600060006000600060007310000000000000000000000000000000000000025af16002553d600060003e600051600355",
+                "nonce" : "0x00",
+                "storage" : {
+                    "0x01" : "0x0100",
+                    "0x02" : "0x0100",
+                    "0x03" : "0x0100"
+                }
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {
+                "balance" : "0x6124fee993bc0000",
+                "code" : "0x",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            }
+        },
+        "transaction" : {
+            "data" : [
+                "0x"
+            ],
+            "gasLimit" : [
+                "0x07a120"
+            ],
+            "gasPrice" : "0x0a",
+            "nonce" : "0x00",
+            "secretKey" : "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8",
+            "sender" : "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "to" : "0x8a0a19589531694250d570040a0c4b74576919b8",
+            "value" : [
+                "0x00"
+            ]
+        }
+    },
+    "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Paris-state_test-second_suicide_DELEGATECALL-first_suicide_DELEGATECALL]" : {
+        "_info" : {
+            "comment" : "`execution-spec-tests` generated test",
+            "description" : "Test function documentation:\n\n    Suicide reentrancy scenario:\n\n    Call|Callcode|Delegatecall the contract S.\n    S self destructs.\n    Call the revert proxy contract R.\n    R Calls|Callcode|Delegatecall S.\n    S self destructs (for the second time).\n    R reverts (including the effects of the second selfdestruct).\n    It is expected the S is self destructed after the transaction.",
+            "filling-rpc-server" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "filling-tool-version" : "retesteth-0.3.2-cancun+commit.2a41f237.Linux.g++",
+            "filling-transition-tool" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "generatedTestHash" : "29712a8e157450d0866d796032b1291982cd2c58363631e855a9f3ba687c579e",
+            "hash" : "0x7a5298874ea9a2469994b031e8f0b0a6d9067f6f3fb4779181017f7f2d69f02a",
+            "lllcversion" : "Version: 0.5.14-develop.2023.7.11+commit.c58ab2c6.mod.Linux.g++",
+            "solidity" : "Version: 0.8.21+commit.d9974bed.Linux.g++",
+            "source" : "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py",
+            "sourceHash" : "e2f4e511e7fa159efc349cb0c53c8ff499d77f037da177c53ee125e066fa4c10",
+            "url" : "https://github.com/ethereum/execution-spec-tests/blob/87ef9bee36585b5b9f72d6eaafeeb1999b641d3c/tests/tmp/tmptest_7b48c1f5_cdc8_4ff9_a1f6_c4e180ee27a2/test_reentrancy_selfdestruct_revert.py#L35"
+        },
+        "env" : {
+            "currentBaseFee" : "0x07",
+            "currentCoinbase" : "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentDifficulty" : "0x00",
+            "currentGasLimit" : "0xff112233445566",
+            "currentNumber" : "0x01",
+            "currentRandom" : "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentTimestamp" : "0x03e8"
+        },
+        "post" : {
+            "Paris" : [
+                {
+                    "hash" : "0x07c18c2836095cd867424aff4eb0c30a5fd88127ee2f7951adec5fb166f1fb25",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf860800a8307a120948a0a19589531694250d570040a0c4b74576919b880801ca09a207ad45b7fc2aa5f8e72a30487f2b0bc489778e6d022f19036efdf2a922a17a0640d4da05078b5a4aa561f1b4d58176ea828bfa0f88d27d14459c1d789e1a1eb"
+                }
+            ]
+        },
+        "pre" : {
+            "0x1000000000000000000000000000000000000001" : {
+                "balance" : "0x29a2241af62c0000",
+                "code" : "0x6103e8ff",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x1000000000000000000000000000000000000002" : {
+                "balance" : "0x4563918244f40000",
+                "code" : "0x60006000600060647310000000000000000000000000000000000000015af4600f0160005260206000fd",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x8a0a19589531694250d570040a0c4b74576919b8" : {
+                "balance" : "0x0de0b6b3a7640000",
+                "code" : "0x60006000600060007310000000000000000000000000000000000000015af4600155600060006000600060007310000000000000000000000000000000000000025af16002553d600060003e600051600355",
+                "nonce" : "0x00",
+                "storage" : {
+                    "0x01" : "0x0100",
+                    "0x02" : "0x0100",
+                    "0x03" : "0x0100"
+                }
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {
+                "balance" : "0x6124fee993bc0000",
+                "code" : "0x",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            }
+        },
+        "transaction" : {
+            "data" : [
+                "0x"
+            ],
+            "gasLimit" : [
+                "0x07a120"
+            ],
+            "gasPrice" : "0x0a",
+            "nonce" : "0x00",
+            "secretKey" : "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8",
+            "sender" : "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "to" : "0x8a0a19589531694250d570040a0c4b74576919b8",
+            "value" : [
+                "0x00"
+            ]
+        }
+    },
+    "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Shanghai-state_test-second_suicide_CALL-first_suicide_CALLCODE]" : {
+        "_info" : {
+            "comment" : "`execution-spec-tests` generated test",
+            "description" : "Test function documentation:\n\n    Suicide reentrancy scenario:\n\n    Call|Callcode|Delegatecall the contract S.\n    S self destructs.\n    Call the revert proxy contract R.\n    R Calls|Callcode|Delegatecall S.\n    S self destructs (for the second time).\n    R reverts (including the effects of the second selfdestruct).\n    It is expected the S is self destructed after the transaction.",
+            "filling-rpc-server" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "filling-tool-version" : "retesteth-0.3.2-cancun+commit.2a41f237.Linux.g++",
+            "filling-transition-tool" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "generatedTestHash" : "6352a4c20711ef39b58a0a88aeea48a82439cd202a52950994103dabdc85fdf9",
+            "hash" : "0x6cc49e2ff59cc15e7640be377d00821bf7c8f99447fa1ef4aa2532c5e0932ef6",
+            "lllcversion" : "Version: 0.5.14-develop.2023.7.11+commit.c58ab2c6.mod.Linux.g++",
+            "solidity" : "Version: 0.8.21+commit.d9974bed.Linux.g++",
+            "source" : "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py",
+            "sourceHash" : "e2f4e511e7fa159efc349cb0c53c8ff499d77f037da177c53ee125e066fa4c10",
+            "url" : "https://github.com/ethereum/execution-spec-tests/blob/87ef9bee36585b5b9f72d6eaafeeb1999b641d3c/tests/tmp/tmptest_7b48c1f5_cdc8_4ff9_a1f6_c4e180ee27a2/test_reentrancy_selfdestruct_revert.py#L35"
+        },
+        "env" : {
+            "currentBaseFee" : "0x07",
+            "currentCoinbase" : "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentDifficulty" : "0x00",
+            "currentGasLimit" : "0xff112233445566",
+            "currentNumber" : "0x01",
+            "currentRandom" : "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentTimestamp" : "0x03e8"
+        },
+        "post" : {
+            "Shanghai" : [
+                {
+                    "hash" : "0xb3884183528c49f388d9ef14920ea125c2309605d455b396c84d8a44ad895aca",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf860800a8307a120948a0a19589531694250d570040a0c4b74576919b880801ca09a207ad45b7fc2aa5f8e72a30487f2b0bc489778e6d022f19036efdf2a922a17a0640d4da05078b5a4aa561f1b4d58176ea828bfa0f88d27d14459c1d789e1a1eb"
+                }
+            ]
+        },
+        "pre" : {
+            "0x1000000000000000000000000000000000000001" : {
+                "balance" : "0x29a2241af62c0000",
+                "code" : "0x6103e8ff",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x1000000000000000000000000000000000000002" : {
+                "balance" : "0x4563918244f40000",
+                "code" : "0x600060006000600060647310000000000000000000000000000000000000015af1600f0160005260206000fd",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x8a0a19589531694250d570040a0c4b74576919b8" : {
+                "balance" : "0x0de0b6b3a7640000",
+                "code" : "0x600060006000600060007310000000000000000000000000000000000000015af2600155600060006000600060007310000000000000000000000000000000000000025af16002553d600060003e600051600355",
+                "nonce" : "0x00",
+                "storage" : {
+                    "0x01" : "0x0100",
+                    "0x02" : "0x0100",
+                    "0x03" : "0x0100"
+                }
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {
+                "balance" : "0x6124fee993bc0000",
+                "code" : "0x",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            }
+        },
+        "transaction" : {
+            "data" : [
+                "0x"
+            ],
+            "gasLimit" : [
+                "0x07a120"
+            ],
+            "gasPrice" : "0x0a",
+            "nonce" : "0x00",
+            "secretKey" : "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8",
+            "sender" : "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "to" : "0x8a0a19589531694250d570040a0c4b74576919b8",
+            "value" : [
+                "0x00"
+            ]
+        }
+    },
+    "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Shanghai-state_test-second_suicide_CALL-first_suicide_CALL]" : {
+        "_info" : {
+            "comment" : "`execution-spec-tests` generated test",
+            "description" : "Test function documentation:\n\n    Suicide reentrancy scenario:\n\n    Call|Callcode|Delegatecall the contract S.\n    S self destructs.\n    Call the revert proxy contract R.\n    R Calls|Callcode|Delegatecall S.\n    S self destructs (for the second time).\n    R reverts (including the effects of the second selfdestruct).\n    It is expected the S is self destructed after the transaction.",
+            "filling-rpc-server" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "filling-tool-version" : "retesteth-0.3.2-cancun+commit.2a41f237.Linux.g++",
+            "filling-transition-tool" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "generatedTestHash" : "9337160cb3e9b0d73a6ed89778bbc97698906814f995d2f795f8986f75d5729c",
+            "hash" : "0xc8545f4439ab97423e263f633866789aa94af4f76618cb56b77fe8b3480d77b7",
+            "lllcversion" : "Version: 0.5.14-develop.2023.7.11+commit.c58ab2c6.mod.Linux.g++",
+            "solidity" : "Version: 0.8.21+commit.d9974bed.Linux.g++",
+            "source" : "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py",
+            "sourceHash" : "e2f4e511e7fa159efc349cb0c53c8ff499d77f037da177c53ee125e066fa4c10",
+            "url" : "https://github.com/ethereum/execution-spec-tests/blob/87ef9bee36585b5b9f72d6eaafeeb1999b641d3c/tests/tmp/tmptest_7b48c1f5_cdc8_4ff9_a1f6_c4e180ee27a2/test_reentrancy_selfdestruct_revert.py#L35"
+        },
+        "env" : {
+            "currentBaseFee" : "0x07",
+            "currentCoinbase" : "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentDifficulty" : "0x00",
+            "currentGasLimit" : "0xff112233445566",
+            "currentNumber" : "0x01",
+            "currentRandom" : "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentTimestamp" : "0x03e8"
+        },
+        "post" : {
+            "Shanghai" : [
+                {
+                    "hash" : "0xccb82768fb01f42f158e0735788484d84630aeccfef9d72028fba43971c4b3ab",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf860800a8307a120948a0a19589531694250d570040a0c4b74576919b880801ca09a207ad45b7fc2aa5f8e72a30487f2b0bc489778e6d022f19036efdf2a922a17a0640d4da05078b5a4aa561f1b4d58176ea828bfa0f88d27d14459c1d789e1a1eb"
+                }
+            ]
+        },
+        "pre" : {
+            "0x1000000000000000000000000000000000000001" : {
+                "balance" : "0x29a2241af62c0000",
+                "code" : "0x6103e8ff",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x1000000000000000000000000000000000000002" : {
+                "balance" : "0x4563918244f40000",
+                "code" : "0x600060006000600060647310000000000000000000000000000000000000015af1600f0160005260206000fd",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x8a0a19589531694250d570040a0c4b74576919b8" : {
+                "balance" : "0x0de0b6b3a7640000",
+                "code" : "0x600060006000600060007310000000000000000000000000000000000000015af1600155600060006000600060007310000000000000000000000000000000000000025af16002553d600060003e600051600355",
+                "nonce" : "0x00",
+                "storage" : {
+                    "0x01" : "0x0100",
+                    "0x02" : "0x0100",
+                    "0x03" : "0x0100"
+                }
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {
+                "balance" : "0x6124fee993bc0000",
+                "code" : "0x",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            }
+        },
+        "transaction" : {
+            "data" : [
+                "0x"
+            ],
+            "gasLimit" : [
+                "0x07a120"
+            ],
+            "gasPrice" : "0x0a",
+            "nonce" : "0x00",
+            "secretKey" : "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8",
+            "sender" : "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "to" : "0x8a0a19589531694250d570040a0c4b74576919b8",
+            "value" : [
+                "0x00"
+            ]
+        }
+    },
+    "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Shanghai-state_test-second_suicide_CALL-first_suicide_DELEGATECALL]" : {
+        "_info" : {
+            "comment" : "`execution-spec-tests` generated test",
+            "description" : "Test function documentation:\n\n    Suicide reentrancy scenario:\n\n    Call|Callcode|Delegatecall the contract S.\n    S self destructs.\n    Call the revert proxy contract R.\n    R Calls|Callcode|Delegatecall S.\n    S self destructs (for the second time).\n    R reverts (including the effects of the second selfdestruct).\n    It is expected the S is self destructed after the transaction.",
+            "filling-rpc-server" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "filling-tool-version" : "retesteth-0.3.2-cancun+commit.2a41f237.Linux.g++",
+            "filling-transition-tool" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "generatedTestHash" : "6b6c5ee55776b5c706d638a3de611f9d3401e14fb5fba3389e65243fce5b44f3",
+            "hash" : "0x4d691a3aadd95a327905a1ffe6ac0d0b448f906809a6a54ebcdf7451fb0a6e45",
+            "lllcversion" : "Version: 0.5.14-develop.2023.7.11+commit.c58ab2c6.mod.Linux.g++",
+            "solidity" : "Version: 0.8.21+commit.d9974bed.Linux.g++",
+            "source" : "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py",
+            "sourceHash" : "e2f4e511e7fa159efc349cb0c53c8ff499d77f037da177c53ee125e066fa4c10",
+            "url" : "https://github.com/ethereum/execution-spec-tests/blob/87ef9bee36585b5b9f72d6eaafeeb1999b641d3c/tests/tmp/tmptest_7b48c1f5_cdc8_4ff9_a1f6_c4e180ee27a2/test_reentrancy_selfdestruct_revert.py#L35"
+        },
+        "env" : {
+            "currentBaseFee" : "0x07",
+            "currentCoinbase" : "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentDifficulty" : "0x00",
+            "currentGasLimit" : "0xff112233445566",
+            "currentNumber" : "0x01",
+            "currentRandom" : "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentTimestamp" : "0x03e8"
+        },
+        "post" : {
+            "Shanghai" : [
+                {
+                    "hash" : "0x5aeabce9e84c80a26ccd5fc8640231a918a4daa521d1f7b09f1ae45c83c209b2",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf860800a8307a120948a0a19589531694250d570040a0c4b74576919b880801ca09a207ad45b7fc2aa5f8e72a30487f2b0bc489778e6d022f19036efdf2a922a17a0640d4da05078b5a4aa561f1b4d58176ea828bfa0f88d27d14459c1d789e1a1eb"
+                }
+            ]
+        },
+        "pre" : {
+            "0x1000000000000000000000000000000000000001" : {
+                "balance" : "0x29a2241af62c0000",
+                "code" : "0x6103e8ff",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x1000000000000000000000000000000000000002" : {
+                "balance" : "0x4563918244f40000",
+                "code" : "0x600060006000600060647310000000000000000000000000000000000000015af1600f0160005260206000fd",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x8a0a19589531694250d570040a0c4b74576919b8" : {
+                "balance" : "0x0de0b6b3a7640000",
+                "code" : "0x60006000600060007310000000000000000000000000000000000000015af4600155600060006000600060007310000000000000000000000000000000000000025af16002553d600060003e600051600355",
+                "nonce" : "0x00",
+                "storage" : {
+                    "0x01" : "0x0100",
+                    "0x02" : "0x0100",
+                    "0x03" : "0x0100"
+                }
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {
+                "balance" : "0x6124fee993bc0000",
+                "code" : "0x",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            }
+        },
+        "transaction" : {
+            "data" : [
+                "0x"
+            ],
+            "gasLimit" : [
+                "0x07a120"
+            ],
+            "gasPrice" : "0x0a",
+            "nonce" : "0x00",
+            "secretKey" : "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8",
+            "sender" : "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "to" : "0x8a0a19589531694250d570040a0c4b74576919b8",
+            "value" : [
+                "0x00"
+            ]
+        }
+    },
+    "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Shanghai-state_test-second_suicide_CALLCODE-first_suicide_CALLCODE]" : {
+        "_info" : {
+            "comment" : "`execution-spec-tests` generated test",
+            "description" : "Test function documentation:\n\n    Suicide reentrancy scenario:\n\n    Call|Callcode|Delegatecall the contract S.\n    S self destructs.\n    Call the revert proxy contract R.\n    R Calls|Callcode|Delegatecall S.\n    S self destructs (for the second time).\n    R reverts (including the effects of the second selfdestruct).\n    It is expected the S is self destructed after the transaction.",
+            "filling-rpc-server" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "filling-tool-version" : "retesteth-0.3.2-cancun+commit.2a41f237.Linux.g++",
+            "filling-transition-tool" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "generatedTestHash" : "15f4670344e8ea49a8fbb6fc7f9be46b0295d1f68e6a19efeb89909335bb362a",
+            "hash" : "0x8a4f29c710e39501855fd06fc5fcb85d7f8f5514578ba5a8d8d0eaba2b96b055",
+            "lllcversion" : "Version: 0.5.14-develop.2023.7.11+commit.c58ab2c6.mod.Linux.g++",
+            "solidity" : "Version: 0.8.21+commit.d9974bed.Linux.g++",
+            "source" : "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py",
+            "sourceHash" : "e2f4e511e7fa159efc349cb0c53c8ff499d77f037da177c53ee125e066fa4c10",
+            "url" : "https://github.com/ethereum/execution-spec-tests/blob/87ef9bee36585b5b9f72d6eaafeeb1999b641d3c/tests/tmp/tmptest_7b48c1f5_cdc8_4ff9_a1f6_c4e180ee27a2/test_reentrancy_selfdestruct_revert.py#L35"
+        },
+        "env" : {
+            "currentBaseFee" : "0x07",
+            "currentCoinbase" : "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentDifficulty" : "0x00",
+            "currentGasLimit" : "0xff112233445566",
+            "currentNumber" : "0x01",
+            "currentRandom" : "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentTimestamp" : "0x03e8"
+        },
+        "post" : {
+            "Shanghai" : [
+                {
+                    "hash" : "0x530f07050074b60959c2e810d9596f00afbf270a9d3ea9071d32e976117e0297",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf860800a8307a120948a0a19589531694250d570040a0c4b74576919b880801ca09a207ad45b7fc2aa5f8e72a30487f2b0bc489778e6d022f19036efdf2a922a17a0640d4da05078b5a4aa561f1b4d58176ea828bfa0f88d27d14459c1d789e1a1eb"
+                }
+            ]
+        },
+        "pre" : {
+            "0x1000000000000000000000000000000000000001" : {
+                "balance" : "0x29a2241af62c0000",
+                "code" : "0x6103e8ff",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x1000000000000000000000000000000000000002" : {
+                "balance" : "0x4563918244f40000",
+                "code" : "0x600060006000600060647310000000000000000000000000000000000000015af2600f0160005260206000fd",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x8a0a19589531694250d570040a0c4b74576919b8" : {
+                "balance" : "0x0de0b6b3a7640000",
+                "code" : "0x600060006000600060007310000000000000000000000000000000000000015af2600155600060006000600060007310000000000000000000000000000000000000025af16002553d600060003e600051600355",
+                "nonce" : "0x00",
+                "storage" : {
+                    "0x01" : "0x0100",
+                    "0x02" : "0x0100",
+                    "0x03" : "0x0100"
+                }
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {
+                "balance" : "0x6124fee993bc0000",
+                "code" : "0x",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            }
+        },
+        "transaction" : {
+            "data" : [
+                "0x"
+            ],
+            "gasLimit" : [
+                "0x07a120"
+            ],
+            "gasPrice" : "0x0a",
+            "nonce" : "0x00",
+            "secretKey" : "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8",
+            "sender" : "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "to" : "0x8a0a19589531694250d570040a0c4b74576919b8",
+            "value" : [
+                "0x00"
+            ]
+        }
+    },
+    "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Shanghai-state_test-second_suicide_CALLCODE-first_suicide_CALL]" : {
+        "_info" : {
+            "comment" : "`execution-spec-tests` generated test",
+            "description" : "Test function documentation:\n\n    Suicide reentrancy scenario:\n\n    Call|Callcode|Delegatecall the contract S.\n    S self destructs.\n    Call the revert proxy contract R.\n    R Calls|Callcode|Delegatecall S.\n    S self destructs (for the second time).\n    R reverts (including the effects of the second selfdestruct).\n    It is expected the S is self destructed after the transaction.",
+            "filling-rpc-server" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "filling-tool-version" : "retesteth-0.3.2-cancun+commit.2a41f237.Linux.g++",
+            "filling-transition-tool" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "generatedTestHash" : "e186ea582594ac280ecc3e6f30755fee219097615fd8a37018a4c5a677fd51d8",
+            "hash" : "0x32469351b30e63ffa5494619a658ee5e057f8aadaf8eefbecb49d286311072db",
+            "lllcversion" : "Version: 0.5.14-develop.2023.7.11+commit.c58ab2c6.mod.Linux.g++",
+            "solidity" : "Version: 0.8.21+commit.d9974bed.Linux.g++",
+            "source" : "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py",
+            "sourceHash" : "e2f4e511e7fa159efc349cb0c53c8ff499d77f037da177c53ee125e066fa4c10",
+            "url" : "https://github.com/ethereum/execution-spec-tests/blob/87ef9bee36585b5b9f72d6eaafeeb1999b641d3c/tests/tmp/tmptest_7b48c1f5_cdc8_4ff9_a1f6_c4e180ee27a2/test_reentrancy_selfdestruct_revert.py#L35"
+        },
+        "env" : {
+            "currentBaseFee" : "0x07",
+            "currentCoinbase" : "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentDifficulty" : "0x00",
+            "currentGasLimit" : "0xff112233445566",
+            "currentNumber" : "0x01",
+            "currentRandom" : "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentTimestamp" : "0x03e8"
+        },
+        "post" : {
+            "Shanghai" : [
+                {
+                    "hash" : "0x62f0b13b24b9143a2baf7264f43bea830cf4e5daa27e873cbedaba1c5df1b724",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf860800a8307a120948a0a19589531694250d570040a0c4b74576919b880801ca09a207ad45b7fc2aa5f8e72a30487f2b0bc489778e6d022f19036efdf2a922a17a0640d4da05078b5a4aa561f1b4d58176ea828bfa0f88d27d14459c1d789e1a1eb"
+                }
+            ]
+        },
+        "pre" : {
+            "0x1000000000000000000000000000000000000001" : {
+                "balance" : "0x29a2241af62c0000",
+                "code" : "0x6103e8ff",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x1000000000000000000000000000000000000002" : {
+                "balance" : "0x4563918244f40000",
+                "code" : "0x600060006000600060647310000000000000000000000000000000000000015af2600f0160005260206000fd",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x8a0a19589531694250d570040a0c4b74576919b8" : {
+                "balance" : "0x0de0b6b3a7640000",
+                "code" : "0x600060006000600060007310000000000000000000000000000000000000015af1600155600060006000600060007310000000000000000000000000000000000000025af16002553d600060003e600051600355",
+                "nonce" : "0x00",
+                "storage" : {
+                    "0x01" : "0x0100",
+                    "0x02" : "0x0100",
+                    "0x03" : "0x0100"
+                }
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {
+                "balance" : "0x6124fee993bc0000",
+                "code" : "0x",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            }
+        },
+        "transaction" : {
+            "data" : [
+                "0x"
+            ],
+            "gasLimit" : [
+                "0x07a120"
+            ],
+            "gasPrice" : "0x0a",
+            "nonce" : "0x00",
+            "secretKey" : "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8",
+            "sender" : "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "to" : "0x8a0a19589531694250d570040a0c4b74576919b8",
+            "value" : [
+                "0x00"
+            ]
+        }
+    },
+    "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Shanghai-state_test-second_suicide_CALLCODE-first_suicide_DELEGATECALL]" : {
+        "_info" : {
+            "comment" : "`execution-spec-tests` generated test",
+            "description" : "Test function documentation:\n\n    Suicide reentrancy scenario:\n\n    Call|Callcode|Delegatecall the contract S.\n    S self destructs.\n    Call the revert proxy contract R.\n    R Calls|Callcode|Delegatecall S.\n    S self destructs (for the second time).\n    R reverts (including the effects of the second selfdestruct).\n    It is expected the S is self destructed after the transaction.",
+            "filling-rpc-server" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "filling-tool-version" : "retesteth-0.3.2-cancun+commit.2a41f237.Linux.g++",
+            "filling-transition-tool" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "generatedTestHash" : "0d435f512e894f3e67a7d1c7d6b91b96721f54b0acb38352c659f8321ecab160",
+            "hash" : "0x83950368d8b850e87f4f7050779e0867049662d7a02824d6c649ffe00fb924bd",
+            "lllcversion" : "Version: 0.5.14-develop.2023.7.11+commit.c58ab2c6.mod.Linux.g++",
+            "solidity" : "Version: 0.8.21+commit.d9974bed.Linux.g++",
+            "source" : "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py",
+            "sourceHash" : "e2f4e511e7fa159efc349cb0c53c8ff499d77f037da177c53ee125e066fa4c10",
+            "url" : "https://github.com/ethereum/execution-spec-tests/blob/87ef9bee36585b5b9f72d6eaafeeb1999b641d3c/tests/tmp/tmptest_7b48c1f5_cdc8_4ff9_a1f6_c4e180ee27a2/test_reentrancy_selfdestruct_revert.py#L35"
+        },
+        "env" : {
+            "currentBaseFee" : "0x07",
+            "currentCoinbase" : "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentDifficulty" : "0x00",
+            "currentGasLimit" : "0xff112233445566",
+            "currentNumber" : "0x01",
+            "currentRandom" : "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentTimestamp" : "0x03e8"
+        },
+        "post" : {
+            "Shanghai" : [
+                {
+                    "hash" : "0x639170e86f88db4819f56d81c49f5f3c43ba72a70d33163f7a756d904c00a340",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf860800a8307a120948a0a19589531694250d570040a0c4b74576919b880801ca09a207ad45b7fc2aa5f8e72a30487f2b0bc489778e6d022f19036efdf2a922a17a0640d4da05078b5a4aa561f1b4d58176ea828bfa0f88d27d14459c1d789e1a1eb"
+                }
+            ]
+        },
+        "pre" : {
+            "0x1000000000000000000000000000000000000001" : {
+                "balance" : "0x29a2241af62c0000",
+                "code" : "0x6103e8ff",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x1000000000000000000000000000000000000002" : {
+                "balance" : "0x4563918244f40000",
+                "code" : "0x600060006000600060647310000000000000000000000000000000000000015af2600f0160005260206000fd",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x8a0a19589531694250d570040a0c4b74576919b8" : {
+                "balance" : "0x0de0b6b3a7640000",
+                "code" : "0x60006000600060007310000000000000000000000000000000000000015af4600155600060006000600060007310000000000000000000000000000000000000025af16002553d600060003e600051600355",
+                "nonce" : "0x00",
+                "storage" : {
+                    "0x01" : "0x0100",
+                    "0x02" : "0x0100",
+                    "0x03" : "0x0100"
+                }
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {
+                "balance" : "0x6124fee993bc0000",
+                "code" : "0x",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            }
+        },
+        "transaction" : {
+            "data" : [
+                "0x"
+            ],
+            "gasLimit" : [
+                "0x07a120"
+            ],
+            "gasPrice" : "0x0a",
+            "nonce" : "0x00",
+            "secretKey" : "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8",
+            "sender" : "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "to" : "0x8a0a19589531694250d570040a0c4b74576919b8",
+            "value" : [
+                "0x00"
+            ]
+        }
+    },
+    "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Shanghai-state_test-second_suicide_DELEGATECALL-first_suicide_CALLCODE]" : {
+        "_info" : {
+            "comment" : "`execution-spec-tests` generated test",
+            "description" : "Test function documentation:\n\n    Suicide reentrancy scenario:\n\n    Call|Callcode|Delegatecall the contract S.\n    S self destructs.\n    Call the revert proxy contract R.\n    R Calls|Callcode|Delegatecall S.\n    S self destructs (for the second time).\n    R reverts (including the effects of the second selfdestruct).\n    It is expected the S is self destructed after the transaction.",
+            "filling-rpc-server" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "filling-tool-version" : "retesteth-0.3.2-cancun+commit.2a41f237.Linux.g++",
+            "filling-transition-tool" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "generatedTestHash" : "804d78bead6bb4b11b92d65ff6ab98d837ec5c732c0d52efb9f38e75e8984903",
+            "hash" : "0x5b860ef5e4cd0edc9f00af235b5a5761eb0df47895690c3ec923a70c6be9981b",
+            "lllcversion" : "Version: 0.5.14-develop.2023.7.11+commit.c58ab2c6.mod.Linux.g++",
+            "solidity" : "Version: 0.8.21+commit.d9974bed.Linux.g++",
+            "source" : "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py",
+            "sourceHash" : "e2f4e511e7fa159efc349cb0c53c8ff499d77f037da177c53ee125e066fa4c10",
+            "url" : "https://github.com/ethereum/execution-spec-tests/blob/87ef9bee36585b5b9f72d6eaafeeb1999b641d3c/tests/tmp/tmptest_7b48c1f5_cdc8_4ff9_a1f6_c4e180ee27a2/test_reentrancy_selfdestruct_revert.py#L35"
+        },
+        "env" : {
+            "currentBaseFee" : "0x07",
+            "currentCoinbase" : "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentDifficulty" : "0x00",
+            "currentGasLimit" : "0xff112233445566",
+            "currentNumber" : "0x01",
+            "currentRandom" : "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentTimestamp" : "0x03e8"
+        },
+        "post" : {
+            "Shanghai" : [
+                {
+                    "hash" : "0xbaf248065226cf295d0be9572c7755690119798beac037743f473f27195f7e10",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf860800a8307a120948a0a19589531694250d570040a0c4b74576919b880801ca09a207ad45b7fc2aa5f8e72a30487f2b0bc489778e6d022f19036efdf2a922a17a0640d4da05078b5a4aa561f1b4d58176ea828bfa0f88d27d14459c1d789e1a1eb"
+                }
+            ]
+        },
+        "pre" : {
+            "0x1000000000000000000000000000000000000001" : {
+                "balance" : "0x29a2241af62c0000",
+                "code" : "0x6103e8ff",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x1000000000000000000000000000000000000002" : {
+                "balance" : "0x4563918244f40000",
+                "code" : "0x60006000600060647310000000000000000000000000000000000000015af4600f0160005260206000fd",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x8a0a19589531694250d570040a0c4b74576919b8" : {
+                "balance" : "0x0de0b6b3a7640000",
+                "code" : "0x600060006000600060007310000000000000000000000000000000000000015af2600155600060006000600060007310000000000000000000000000000000000000025af16002553d600060003e600051600355",
+                "nonce" : "0x00",
+                "storage" : {
+                    "0x01" : "0x0100",
+                    "0x02" : "0x0100",
+                    "0x03" : "0x0100"
+                }
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {
+                "balance" : "0x6124fee993bc0000",
+                "code" : "0x",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            }
+        },
+        "transaction" : {
+            "data" : [
+                "0x"
+            ],
+            "gasLimit" : [
+                "0x07a120"
+            ],
+            "gasPrice" : "0x0a",
+            "nonce" : "0x00",
+            "secretKey" : "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8",
+            "sender" : "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "to" : "0x8a0a19589531694250d570040a0c4b74576919b8",
+            "value" : [
+                "0x00"
+            ]
+        }
+    },
+    "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Shanghai-state_test-second_suicide_DELEGATECALL-first_suicide_CALL]" : {
+        "_info" : {
+            "comment" : "`execution-spec-tests` generated test",
+            "description" : "Test function documentation:\n\n    Suicide reentrancy scenario:\n\n    Call|Callcode|Delegatecall the contract S.\n    S self destructs.\n    Call the revert proxy contract R.\n    R Calls|Callcode|Delegatecall S.\n    S self destructs (for the second time).\n    R reverts (including the effects of the second selfdestruct).\n    It is expected the S is self destructed after the transaction.",
+            "filling-rpc-server" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "filling-tool-version" : "retesteth-0.3.2-cancun+commit.2a41f237.Linux.g++",
+            "filling-transition-tool" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "generatedTestHash" : "6ca5838dcd37e42cce24a829c62bc5eafa0d66ba4f384b156760c46f011ce82f",
+            "hash" : "0xc0c3b8e6fd3346a2f397ff2a62f9a9d4223ebc961abe37968ab30b2383a3a52a",
+            "lllcversion" : "Version: 0.5.14-develop.2023.7.11+commit.c58ab2c6.mod.Linux.g++",
+            "solidity" : "Version: 0.8.21+commit.d9974bed.Linux.g++",
+            "source" : "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py",
+            "sourceHash" : "e2f4e511e7fa159efc349cb0c53c8ff499d77f037da177c53ee125e066fa4c10",
+            "url" : "https://github.com/ethereum/execution-spec-tests/blob/87ef9bee36585b5b9f72d6eaafeeb1999b641d3c/tests/tmp/tmptest_7b48c1f5_cdc8_4ff9_a1f6_c4e180ee27a2/test_reentrancy_selfdestruct_revert.py#L35"
+        },
+        "env" : {
+            "currentBaseFee" : "0x07",
+            "currentCoinbase" : "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentDifficulty" : "0x00",
+            "currentGasLimit" : "0xff112233445566",
+            "currentNumber" : "0x01",
+            "currentRandom" : "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentTimestamp" : "0x03e8"
+        },
+        "post" : {
+            "Shanghai" : [
+                {
+                    "hash" : "0x6fc5bc0bc96b5d5cc285ef402303275fcf40330865776d0bcd6cc313b7ce4d87",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf860800a8307a120948a0a19589531694250d570040a0c4b74576919b880801ca09a207ad45b7fc2aa5f8e72a30487f2b0bc489778e6d022f19036efdf2a922a17a0640d4da05078b5a4aa561f1b4d58176ea828bfa0f88d27d14459c1d789e1a1eb"
+                }
+            ]
+        },
+        "pre" : {
+            "0x1000000000000000000000000000000000000001" : {
+                "balance" : "0x29a2241af62c0000",
+                "code" : "0x6103e8ff",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x1000000000000000000000000000000000000002" : {
+                "balance" : "0x4563918244f40000",
+                "code" : "0x60006000600060647310000000000000000000000000000000000000015af4600f0160005260206000fd",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x8a0a19589531694250d570040a0c4b74576919b8" : {
+                "balance" : "0x0de0b6b3a7640000",
+                "code" : "0x600060006000600060007310000000000000000000000000000000000000015af1600155600060006000600060007310000000000000000000000000000000000000025af16002553d600060003e600051600355",
+                "nonce" : "0x00",
+                "storage" : {
+                    "0x01" : "0x0100",
+                    "0x02" : "0x0100",
+                    "0x03" : "0x0100"
+                }
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {
+                "balance" : "0x6124fee993bc0000",
+                "code" : "0x",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            }
+        },
+        "transaction" : {
+            "data" : [
+                "0x"
+            ],
+            "gasLimit" : [
+                "0x07a120"
+            ],
+            "gasPrice" : "0x0a",
+            "nonce" : "0x00",
+            "secretKey" : "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8",
+            "sender" : "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "to" : "0x8a0a19589531694250d570040a0c4b74576919b8",
+            "value" : [
+                "0x00"
+            ]
+        }
+    },
+    "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Shanghai-state_test-second_suicide_DELEGATECALL-first_suicide_DELEGATECALL]" : {
+        "_info" : {
+            "comment" : "`execution-spec-tests` generated test",
+            "description" : "Test function documentation:\n\n    Suicide reentrancy scenario:\n\n    Call|Callcode|Delegatecall the contract S.\n    S self destructs.\n    Call the revert proxy contract R.\n    R Calls|Callcode|Delegatecall S.\n    S self destructs (for the second time).\n    R reverts (including the effects of the second selfdestruct).\n    It is expected the S is self destructed after the transaction.",
+            "filling-rpc-server" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "filling-tool-version" : "retesteth-0.3.2-cancun+commit.2a41f237.Linux.g++",
+            "filling-transition-tool" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "generatedTestHash" : "80a2272a2577ce117a9ed820665f2cfddb459645131ab568eb63c001f2e55262",
+            "hash" : "0xec014f823da5381bd979d8e3f88b0e63f21ed4d021d36576d8a190217d1b2eec",
+            "lllcversion" : "Version: 0.5.14-develop.2023.7.11+commit.c58ab2c6.mod.Linux.g++",
+            "solidity" : "Version: 0.8.21+commit.d9974bed.Linux.g++",
+            "source" : "src/GeneralStateTestsFiller/Pyspecs/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py",
+            "sourceHash" : "e2f4e511e7fa159efc349cb0c53c8ff499d77f037da177c53ee125e066fa4c10",
+            "url" : "https://github.com/ethereum/execution-spec-tests/blob/87ef9bee36585b5b9f72d6eaafeeb1999b641d3c/tests/tmp/tmptest_7b48c1f5_cdc8_4ff9_a1f6_c4e180ee27a2/test_reentrancy_selfdestruct_revert.py#L35"
+        },
+        "env" : {
+            "currentBaseFee" : "0x07",
+            "currentCoinbase" : "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentDifficulty" : "0x00",
+            "currentGasLimit" : "0xff112233445566",
+            "currentNumber" : "0x01",
+            "currentRandom" : "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentTimestamp" : "0x03e8"
+        },
+        "post" : {
+            "Shanghai" : [
+                {
+                    "hash" : "0x07c18c2836095cd867424aff4eb0c30a5fd88127ee2f7951adec5fb166f1fb25",
+                    "indexes" : {
+                        "data" : 0,
+                        "gas" : 0,
+                        "value" : 0
+                    },
+                    "logs" : "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes" : "0xf860800a8307a120948a0a19589531694250d570040a0c4b74576919b880801ca09a207ad45b7fc2aa5f8e72a30487f2b0bc489778e6d022f19036efdf2a922a17a0640d4da05078b5a4aa561f1b4d58176ea828bfa0f88d27d14459c1d789e1a1eb"
+                }
+            ]
+        },
+        "pre" : {
+            "0x1000000000000000000000000000000000000001" : {
+                "balance" : "0x29a2241af62c0000",
+                "code" : "0x6103e8ff",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x1000000000000000000000000000000000000002" : {
+                "balance" : "0x4563918244f40000",
+                "code" : "0x60006000600060647310000000000000000000000000000000000000015af4600f0160005260206000fd",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            },
+            "0x8a0a19589531694250d570040a0c4b74576919b8" : {
+                "balance" : "0x0de0b6b3a7640000",
+                "code" : "0x60006000600060007310000000000000000000000000000000000000015af4600155600060006000600060007310000000000000000000000000000000000000025af16002553d600060003e600051600355",
+                "nonce" : "0x00",
+                "storage" : {
+                    "0x01" : "0x0100",
+                    "0x02" : "0x0100",
+                    "0x03" : "0x0100"
+                }
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {
+                "balance" : "0x6124fee993bc0000",
+                "code" : "0x",
+                "nonce" : "0x00",
+                "storage" : {
+                }
+            }
+        },
+        "transaction" : {
+            "data" : [
+                "0x"
+            ],
+            "gasLimit" : [
+                "0x07a120"
+            ],
+            "gasPrice" : "0x0a",
+            "nonce" : "0x00",
+            "secretKey" : "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8",
+            "sender" : "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "to" : "0x8a0a19589531694250d570040a0c4b74576919b8",
+            "value" : [
+                "0x00"
+            ]
+        }
+    }
+}

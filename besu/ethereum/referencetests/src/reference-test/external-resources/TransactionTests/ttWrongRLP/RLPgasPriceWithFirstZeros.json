@@ -1,0 +1,65 @@
+{
+    "RLPgasPriceWithFirstZeros" : {
+        "_info" : {
+            "comment" : "",
+            "filling-rpc-server" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "filling-tool-version" : "retesteth-0.3.2-cancun+commit.cae6bc33.Linux.g++",
+            "generatedTestHash" : "ad802a7f76e11841643fcf672cb36a077eb72be1abe26df27a1ca370eecc4a99",
+            "lllcversion" : "Version: 0.5.14-develop.2023.7.11+commit.c58ab2c6.mod.Linux.g++",
+            "solidity" : "Version: 0.8.21+commit.d9974bed.Linux.g++",
+            "source" : "src/TransactionTestsFiller/ttWrongRLP/RLPgasPriceWithFirstZerosCopier.json",
+            "sourceHash" : "f64146dce9fedc8e5c10073c306ac59d17bc8ddc1c95a0a63875a683be132e0d"
+        },
+        "result" : {
+            "Berlin" : {
+                "exception" : "TransactionException.RLP_LEADING_ZEROS_GASPRICE",
+                "intrinsicGas" : "0x00"
+            },
+            "Byzantium" : {
+                "exception" : "TransactionException.RLP_LEADING_ZEROS_GASPRICE",
+                "intrinsicGas" : "0x00"
+            },
+            "Constantinople" : {
+                "exception" : "TransactionException.RLP_LEADING_ZEROS_GASPRICE",
+                "intrinsicGas" : "0x00"
+            },
+            "ConstantinopleFix" : {
+                "exception" : "TransactionException.RLP_LEADING_ZEROS_GASPRICE",
+                "intrinsicGas" : "0x00"
+            },
+            "EIP150" : {
+                "exception" : "TransactionException.RLP_LEADING_ZEROS_GASPRICE",
+                "intrinsicGas" : "0x00"
+            },
+            "EIP158" : {
+                "exception" : "TransactionException.RLP_LEADING_ZEROS_GASPRICE",
+                "intrinsicGas" : "0x00"
+            },
+            "Frontier" : {
+                "exception" : "TransactionException.RLP_LEADING_ZEROS_GASPRICE",
+                "intrinsicGas" : "0x00"
+            },
+            "Homestead" : {
+                "exception" : "TransactionException.RLP_LEADING_ZEROS_GASPRICE",
+                "intrinsicGas" : "0x00"
+            },
+            "Istanbul" : {
+                "exception" : "TransactionException.RLP_LEADING_ZEROS_GASPRICE",
+                "intrinsicGas" : "0x00"
+            },
+            "London" : {
+                "exception" : "TransactionException.RLP_LEADING_ZEROS_GASPRICE",
+                "intrinsicGas" : "0x00"
+            },
+            "Paris" : {
+                "exception" : "TransactionException.RLP_LEADING_ZEROS_GASPRICE",
+                "intrinsicGas" : "0x00"
+            },
+            "Shanghai" : {
+                "exception" : "TransactionException.RLP_LEADING_ZEROS_GASPRICE",
+                "intrinsicGas" : "0x00"
+            }
+        },
+        "txbytes" : "0xf862808300000182035294095e7baea6a6c7c4c2dfeb977efac326af552d870a801ba048b55bfa915ac795c431978d8a6a992b628d557da5ff759b307d495a36649353a0efffd310ac743f371de3b9f7f9cb56c0b28ad43601b4ab949f53faa07bd2c804"
+    }
+}

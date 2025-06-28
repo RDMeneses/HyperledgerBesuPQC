@@ -1,0 +1,69 @@
+{
+    "maxPriorityFeePerGasOverflow" : {
+        "_info" : {
+            "comment" : "",
+            "filling-rpc-server" : "evm version 1.14.4-unstable-3d8028a6-20240513",
+            "filling-tool-version" : "retesteth-0.3.2-cancun+commit.cae6bc33.Linux.g++",
+            "generatedTestHash" : "4cfe004fb75e3a509c3d9cd994820a8c4e83c0f6c9397c53ca6b2db569ac966c",
+            "lllcversion" : "Version: 0.5.14-develop.2023.7.11+commit.c58ab2c6.mod.Linux.g++",
+            "solidity" : "Version: 0.8.21+commit.d9974bed.Linux.g++",
+            "source" : "src/TransactionTestsFiller/ttEIP1559/maxPriorityFeePerGasOverflowFiller.json",
+            "sourceHash" : "ad9ae711d3037a6681cb755284d2f6a1eaf8942021024403b6e7d9b8c109a240"
+        },
+        "result" : {
+            "Berlin" : {
+                "exception" : "TransactionException.TYPE_NOT_SUPPORTED",
+                "intrinsicGas" : "0x00"
+            },
+            "Byzantium" : {
+                "exception" : "TransactionException.TYPE_NOT_SUPPORTED",
+                "intrinsicGas" : "0x00"
+            },
+            "Cancun" : {
+                "exception" : "TransactionException.PRIORITY_OVERFLOW",
+                "intrinsicGas" : "0x5208"
+            },
+            "Constantinople" : {
+                "exception" : "TransactionException.TYPE_NOT_SUPPORTED",
+                "intrinsicGas" : "0x00"
+            },
+            "ConstantinopleFix" : {
+                "exception" : "TransactionException.TYPE_NOT_SUPPORTED",
+                "intrinsicGas" : "0x00"
+            },
+            "EIP150" : {
+                "exception" : "TransactionException.TYPE_NOT_SUPPORTED",
+                "intrinsicGas" : "0x00"
+            },
+            "EIP158" : {
+                "exception" : "TransactionException.TYPE_NOT_SUPPORTED",
+                "intrinsicGas" : "0x00"
+            },
+            "Frontier" : {
+                "exception" : "TransactionException.TYPE_NOT_SUPPORTED",
+                "intrinsicGas" : "0x00"
+            },
+            "Homestead" : {
+                "exception" : "TransactionException.TYPE_NOT_SUPPORTED",
+                "intrinsicGas" : "0x00"
+            },
+            "Istanbul" : {
+                "exception" : "TransactionException.TYPE_NOT_SUPPORTED",
+                "intrinsicGas" : "0x00"
+            },
+            "London" : {
+                "exception" : "TransactionException.PRIORITY_OVERFLOW",
+                "intrinsicGas" : "0x5208"
+            },
+            "Paris" : {
+                "exception" : "TransactionException.PRIORITY_OVERFLOW",
+                "intrinsicGas" : "0x5208"
+            },
+            "Shanghai" : {
+                "exception" : "TransactionException.PRIORITY_OVERFLOW",
+                "intrinsicGas" : "0x5208"
+            }
+        },
+        "txbytes" : "0x02f8870180a101000000000000000000000000000000000000000000000000000000000000000084b2d05e0082520894095e7baea6a6c7c4c2dfeb977efac326af552d878080c080a05cbd172231fc0735e0fb994dd5b1a4939170a260b36f0427a8a80866b063b948a07c230f7f578dd61785c93361b9871c0706ebfa6d06e3f4491dc9558c5202ed36"
+    }
+}
